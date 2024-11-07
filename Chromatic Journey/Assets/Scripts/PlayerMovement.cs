@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 
     Animator animator;
     int isRunningHash;
+    int isJumpingHash;
 
     [SerializeField] Camera mainCamera;
     private Vector3 cameraOffset = new Vector3(0, 5, -10);
@@ -31,15 +32,16 @@ public class PlayerMovement : MonoBehaviour
 
         animator = GetComponent<Animator>();
         isRunningHash = Animator.StringToHash("isRunning");
+        isJumpingHash = Animator.StringToHash("isJumping");
     }
 
     // Update is called once per frame
     void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
+        bool jumping = Input.GetKeyDown(KeyCode.Space);
 
-
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (jumping)
         {
             Debug.Log("Jump!");
             rb.velocity = new Vector2(rb.velocity.x*0.3f, jumpingPower);
@@ -55,8 +57,10 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-        bool moving = horizontal != 0;
+        bool moving = horizontal > 0.1f || horizontal < -0.1f;
         bool isRunning = animator.GetBool(isRunningHash);
+        bool isJumping = animator.GetBool(isJumpingHash);
+
         //bool shiftPressed = Input.GetKey(KeyCode.LeftShift);
 
 
@@ -70,6 +74,15 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool(isRunningHash, false);
         }
 
+        if (!isJumping && jumping)
+        {
+            animator.SetBool(isJumpingHash, true);
+        }
+
+        if (isJumping && !jumping)
+        {
+            animator.SetBool(isJumpingHash, false);
+        }
 
     }
 
