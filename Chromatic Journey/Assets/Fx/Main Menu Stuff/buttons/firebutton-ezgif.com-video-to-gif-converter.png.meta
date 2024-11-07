@@ -1,0 +1,1307 @@
+fileFormatVersion: 2
+guid: 10eeee79ac615d3488a8e7d623d081d4
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_0
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 6377
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 181e6fcb349726e4c8ecadfbe9e6f929
+      internalID: -1493737044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_1
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 6377
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a64400e88025124494b0d02c485ac88
+      internalID: 1060761473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_2
+      rect:
+        serializedVersion: 2
+        x: 1867
+        y: 6377
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33aa2aea913a0dd4fa95a49ea8f5e2ca
+      internalID: 932318031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_3
+      rect:
+        serializedVersion: 2
+        x: 2731
+        y: 6377
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e278baa63c9b7b4daca983845d2f806
+      internalID: -2064584636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_4
+      rect:
+        serializedVersion: 2
+        x: 3595
+        y: 6377
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36369e21a92104d4389c655667ea796b
+      internalID: 602152516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_5
+      rect:
+        serializedVersion: 2
+        x: 4459
+        y: 6377
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66b167c24d80ccf4aa9cb2cfa7545846
+      internalID: -464585918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_6
+      rect:
+        serializedVersion: 2
+        x: 5323
+        y: 6377
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7791b9b3147c96498e4ec2841ffcf23
+      internalID: 1707500806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_7
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 5513
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a05e2af3c5871e7478c01f6f2fbab9e7
+      internalID: -1519096641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_8
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 5513
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8090b4fae79e9c49b39f84bec55cfc9
+      internalID: 1276342613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_9
+      rect:
+        serializedVersion: 2
+        x: 1867
+        y: 5513
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc4f751cf9fb4004d9cc8114452d090f
+      internalID: -362894851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_10
+      rect:
+        serializedVersion: 2
+        x: 2731
+        y: 5513
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bb8076a35da458439f869442aa24403
+      internalID: -2091229939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_11
+      rect:
+        serializedVersion: 2
+        x: 3595
+        y: 5513
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbe16c19f609df442bf1fb8a3574e197
+      internalID: 2088901333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_12
+      rect:
+        serializedVersion: 2
+        x: 4459
+        y: 5513
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e2ae180cfa8ab3499dd8777144b7393
+      internalID: 41614005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_13
+      rect:
+        serializedVersion: 2
+        x: 5323
+        y: 5513
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d63059ca00d12f43b7fc57361df9839
+      internalID: 1003353723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_14
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 4649
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2866bb029b141d3459adbd79a1632afe
+      internalID: -1518719568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_15
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 4649
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d34ab68c8f570224ba20b4417acffd4e
+      internalID: -469846359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_16
+      rect:
+        serializedVersion: 2
+        x: 1867
+        y: 4649
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb3c042d0a0e70347bbba5941231addd
+      internalID: 753697796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_17
+      rect:
+        serializedVersion: 2
+        x: 2731
+        y: 4649
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6ac1c23c7bab864abdca4725e1595c1
+      internalID: -1014480976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_18
+      rect:
+        serializedVersion: 2
+        x: 3595
+        y: 4649
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9603a35c79177144295ea63a21054a00
+      internalID: -812724678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_19
+      rect:
+        serializedVersion: 2
+        x: 4459
+        y: 4649
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 718679406dd55ce4d8a95270cd3129b2
+      internalID: 1179496600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_20
+      rect:
+        serializedVersion: 2
+        x: 5323
+        y: 4649
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e6195b065791824fafef6cff3d822b3
+      internalID: -1405879510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_21
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 3785
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2df19e068463b54da1ff6d071ad3c7a
+      internalID: 47653774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_22
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 3785
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92474998fafbcd840ac423a2e9f4a9e2
+      internalID: -1062716492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_23
+      rect:
+        serializedVersion: 2
+        x: 1867
+        y: 3785
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c18f1f909f6c4d8408711d87b8547ea9
+      internalID: 1101157974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_24
+      rect:
+        serializedVersion: 2
+        x: 2731
+        y: 3785
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3712fc0be2a4d5c419246404a2568515
+      internalID: -1032526962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_25
+      rect:
+        serializedVersion: 2
+        x: 3595
+        y: 3785
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a2af33ca6f5e0f4793a110780be07e6
+      internalID: -1344183660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_26
+      rect:
+        serializedVersion: 2
+        x: 4459
+        y: 3785
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daa4e4e36fda5814eb1e31ae5d6b5081
+      internalID: -1933613444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_27
+      rect:
+        serializedVersion: 2
+        x: 5323
+        y: 3785
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92f0d83e2a7adb84cba2798a4f029a90
+      internalID: -878883841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_28
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 2921
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddafd5d4b98e21c4ba0b6ac74ed3c577
+      internalID: -1477913671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_29
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 2921
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e22f72b0bc88f1478e6cf885ba3e590
+      internalID: 1109260307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_30
+      rect:
+        serializedVersion: 2
+        x: 1867
+        y: 2921
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40eba7370c18f5f459abd3be1358a33f
+      internalID: -592699508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_31
+      rect:
+        serializedVersion: 2
+        x: 2731
+        y: 2921
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66eae6e851393bf42956c563864bb1c8
+      internalID: -302451999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_32
+      rect:
+        serializedVersion: 2
+        x: 3595
+        y: 2921
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 219e237ee1ec9b04dbd85f24f6bf780c
+      internalID: 1403478762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_33
+      rect:
+        serializedVersion: 2
+        x: 4459
+        y: 2921
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 118d5d44fd6200e4e8e5c309db2a80ef
+      internalID: 649106617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_34
+      rect:
+        serializedVersion: 2
+        x: 5323
+        y: 2921
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 693459d4efa34f146b5ddf04acbbb97a
+      internalID: 1408183956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_35
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 2057
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 187de85ea48b79040a9b369f771d2d7c
+      internalID: 417416328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_36
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 2057
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99d85a489e0a5574aa3376aa3a79a9d6
+      internalID: 1331820221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_37
+      rect:
+        serializedVersion: 2
+        x: 1867
+        y: 2057
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52647c02b472e794ab3dca240fb92a19
+      internalID: -338743736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_38
+      rect:
+        serializedVersion: 2
+        x: 2731
+        y: 2057
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ef1832bbbe7482498cd0e380d7b67ee
+      internalID: 1521024406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_39
+      rect:
+        serializedVersion: 2
+        x: 3595
+        y: 2057
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f26eed86cb7983e45a411b2dce67818c
+      internalID: -1660356718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_40
+      rect:
+        serializedVersion: 2
+        x: 4459
+        y: 2057
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f94955dc19a0114d948120082bcd160
+      internalID: 1941749910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_41
+      rect:
+        serializedVersion: 2
+        x: 5323
+        y: 2057
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 954aea2a28f83084eb4846dd09514368
+      internalID: -1440657231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_42
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 1193
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd8cf817a39938d419e07c6c74576e8c
+      internalID: 993720185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_43
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 1193
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a9b511a9d7a3e04bb2388350770a98b
+      internalID: 575627418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_44
+      rect:
+        serializedVersion: 2
+        x: 1867
+        y: 1193
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 482f63bbd08efda4c9c5230a31280d6e
+      internalID: -1327255114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_45
+      rect:
+        serializedVersion: 2
+        x: 2731
+        y: 1193
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae6080a4ddd3ed64183aad733e36ed10
+      internalID: 1909438825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_46
+      rect:
+        serializedVersion: 2
+        x: 3595
+        y: 1193
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14e391420f4ac0a47957ab834b953d31
+      internalID: 1082800898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_47
+      rect:
+        serializedVersion: 2
+        x: 4459
+        y: 1193
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2073e32b41e85d438112bdfea62c862
+      internalID: 1994814571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_48
+      rect:
+        serializedVersion: 2
+        x: 5323
+        y: 1193
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80284fa00bfcbb54bbcbcd91c1ad79e3
+      internalID: 1399529723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_49
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 329
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b910d46b9d707042aa499a427b8db11
+      internalID: -891996779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_50
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 329
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbe1391ccf0880440b79cd8f38e2690d
+      internalID: 1791739176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_51
+      rect:
+        serializedVersion: 2
+        x: 1867
+        y: 329
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 764a38e2151e35049ae164076ccd65d6
+      internalID: -1325733239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: firebutton-ezgif.com-video-to-gif-converter_52
+      rect:
+        serializedVersion: 2
+        x: 2731
+        y: 329
+        width: 525
+        height: 297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cccb0eba9ffdd2a48b5a863291950925
+      internalID: 2133103644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      firebutton-ezgif.com-video-to-gif-converter_0: -1493737044
+      firebutton-ezgif.com-video-to-gif-converter_1: 1060761473
+      firebutton-ezgif.com-video-to-gif-converter_10: -2091229939
+      firebutton-ezgif.com-video-to-gif-converter_11: 2088901333
+      firebutton-ezgif.com-video-to-gif-converter_12: 41614005
+      firebutton-ezgif.com-video-to-gif-converter_13: 1003353723
+      firebutton-ezgif.com-video-to-gif-converter_14: -1518719568
+      firebutton-ezgif.com-video-to-gif-converter_15: -469846359
+      firebutton-ezgif.com-video-to-gif-converter_16: 753697796
+      firebutton-ezgif.com-video-to-gif-converter_17: -1014480976
+      firebutton-ezgif.com-video-to-gif-converter_18: -812724678
+      firebutton-ezgif.com-video-to-gif-converter_19: 1179496600
+      firebutton-ezgif.com-video-to-gif-converter_2: 932318031
+      firebutton-ezgif.com-video-to-gif-converter_20: -1405879510
+      firebutton-ezgif.com-video-to-gif-converter_21: 47653774
+      firebutton-ezgif.com-video-to-gif-converter_22: -1062716492
+      firebutton-ezgif.com-video-to-gif-converter_23: 1101157974
+      firebutton-ezgif.com-video-to-gif-converter_24: -1032526962
+      firebutton-ezgif.com-video-to-gif-converter_25: -1344183660
+      firebutton-ezgif.com-video-to-gif-converter_26: -1933613444
+      firebutton-ezgif.com-video-to-gif-converter_27: -878883841
+      firebutton-ezgif.com-video-to-gif-converter_28: -1477913671
+      firebutton-ezgif.com-video-to-gif-converter_29: 1109260307
+      firebutton-ezgif.com-video-to-gif-converter_3: -2064584636
+      firebutton-ezgif.com-video-to-gif-converter_30: -592699508
+      firebutton-ezgif.com-video-to-gif-converter_31: -302451999
+      firebutton-ezgif.com-video-to-gif-converter_32: 1403478762
+      firebutton-ezgif.com-video-to-gif-converter_33: 649106617
+      firebutton-ezgif.com-video-to-gif-converter_34: 1408183956
+      firebutton-ezgif.com-video-to-gif-converter_35: 417416328
+      firebutton-ezgif.com-video-to-gif-converter_36: 1331820221
+      firebutton-ezgif.com-video-to-gif-converter_37: -338743736
+      firebutton-ezgif.com-video-to-gif-converter_38: 1521024406
+      firebutton-ezgif.com-video-to-gif-converter_39: -1660356718
+      firebutton-ezgif.com-video-to-gif-converter_4: 602152516
+      firebutton-ezgif.com-video-to-gif-converter_40: 1941749910
+      firebutton-ezgif.com-video-to-gif-converter_41: -1440657231
+      firebutton-ezgif.com-video-to-gif-converter_42: 993720185
+      firebutton-ezgif.com-video-to-gif-converter_43: 575627418
+      firebutton-ezgif.com-video-to-gif-converter_44: -1327255114
+      firebutton-ezgif.com-video-to-gif-converter_45: 1909438825
+      firebutton-ezgif.com-video-to-gif-converter_46: 1082800898
+      firebutton-ezgif.com-video-to-gif-converter_47: 1994814571
+      firebutton-ezgif.com-video-to-gif-converter_48: 1399529723
+      firebutton-ezgif.com-video-to-gif-converter_49: -891996779
+      firebutton-ezgif.com-video-to-gif-converter_5: -464585918
+      firebutton-ezgif.com-video-to-gif-converter_50: 1791739176
+      firebutton-ezgif.com-video-to-gif-converter_51: -1325733239
+      firebutton-ezgif.com-video-to-gif-converter_52: 2133103644
+      firebutton-ezgif.com-video-to-gif-converter_53: -490901905
+      firebutton-ezgif.com-video-to-gif-converter_6: 1707500806
+      firebutton-ezgif.com-video-to-gif-converter_7: -1519096641
+      firebutton-ezgif.com-video-to-gif-converter_8: 1276342613
+      firebutton-ezgif.com-video-to-gif-converter_9: -362894851
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
