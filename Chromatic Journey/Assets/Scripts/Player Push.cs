@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerPush : MonoBehaviour
 {
 
-    public float distance = 1f;
+    public float distance = 10f;
     public LayerMask boxMask;
 
     GameObject box;
