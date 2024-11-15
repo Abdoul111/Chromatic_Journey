@@ -15,16 +15,18 @@ public class PlayerMovement : MonoBehaviour
     private float speed = 7f;
     private float jumpingPower = 15f;
     private bool isFacingRight = true;
+    private MovingPlatform currentPlatform;
+    private Vector2 platformVelocity;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private LayerMask groundLayer; // Assign ground layer in the inspector
     [SerializeField] private Transform groundCheck; // Assign a ground-check transform
-    private float groundCheckRadius = 0.01f;
+    private float groundCheckRadius = 0.1f;
     private bool isGrounded;
     private bool isInAir = false;
     private float jumpCooldown = 0.2f; // Minimum delay before checking ground
     private float jumpTimer = 0f; // Timer to track cooldown
-    private float maxAirTime = 0.6f; // Maximum time allowed in the air before stopping animation
+    private float maxAirTime = 1.0f; // Maximum time allowed in the air before stopping animation
     private float airTime = 0f; // Timer to track how long the player is in the air
 
     // Start is called before the first frame update
@@ -44,8 +46,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-
-    void Update()
+    private void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         bool jumping = Input.GetKeyDown(KeyCode.Space);
@@ -59,7 +60,16 @@ public class PlayerMovement : MonoBehaviour
         // Check if grounded (only if not in cooldown)
         if (jumpTimer <= 0)
         {
-            isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+            // Adjust ground check to account for platform movement
+            if (currentPlatform != null)
+            {
+                Vector2 platformVelocity = currentPlatform.GetPlatformVelocity();
+                isGrounded = Physics2D.OverlapCircle(groundCheck.position + (Vector3)platformVelocity * Time.deltaTime, groundCheckRadius, groundLayer);
+            }
+            else
+            {
+                isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+            }
         }
 
         // Track air time
@@ -121,9 +131,18 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        Vector2 velocity = rb.velocity;
+
+        // Move the player based on input only
+        velocity.x = horizontal * speed;
+
+        // Preserve vertical velocity for gravity/jumping
+        velocity.y = rb.velocity.y;
+
+        rb.velocity = velocity;
     }
 
     private void Flip()
@@ -143,16 +162,20 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("MovingPlatform"))
         {
+            // Attach the player to the platform
             transform.parent = collision.transform;
+            currentPlatform = collision.gameObject.GetComponent<MovingPlatform>();
         }
     }
 
-    // Detach player from platform when they leave it
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("MovingPlatform"))
         {
+            // Detach the player from the platform
             transform.parent = null;
+            currentPlatform = null;
         }
     }
+
 }
