@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8384396780370870419}
   - component: {fileID: 1605548275434225174}
   - component: {fileID: 5541977303551910952}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rock Cover Block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
