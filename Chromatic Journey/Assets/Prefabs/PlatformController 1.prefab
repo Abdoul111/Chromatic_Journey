@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4880290597623017263}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: end
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4035055422498922689}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: start
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 8742739136633980836}
   - component: {fileID: 3754995892720205344}
   - component: {fileID: 4952477495490123614}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Moving Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,7 +202,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1382798268048428176}
   - component: {fileID: 7727612865108583670}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PlatformController 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
