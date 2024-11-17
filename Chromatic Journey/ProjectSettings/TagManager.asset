@@ -6,6 +6,7 @@ TagManager:
   tags:
   - pushable
   - MovingPlatform
+  - Coin
   layers:
   - Default
   - TransparentFX
