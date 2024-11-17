@@ -5,8 +5,23 @@ using UnityEngine.UI;
 public class HealthCounter : MonoBehaviour
 {
     public GameObject losePanel;
-    public static Text healthText;
+    public Text healthText;
     public static int health = 100;
+
+    // Singleton instance
+    public static HealthCounter Instance { get; private set; }
+
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject); // Ensure there's only one instance
+        }
+    }
 
     void Start()
     {
@@ -21,22 +36,20 @@ public class HealthCounter : MonoBehaviour
         health = 100;
     }
 
-    void Update()
-    {
-        if (health == 0)
-        {
-            ShowLosePanel();
-        }
-    }
-
     public static void Damage(int amount)
     {
         health -= amount;
-        health = Mathf.Max(health, 0);// Clamp health to prevent negative values
-        healthText.text = health.ToString();
+        health = Mathf.Max(health, 0); // Clamp health to prevent negative values
+        if (Instance.healthText != null)
+        {
+            Instance.healthText.text = health.ToString();
+        }
 
-        // TODO: handle health drops to or below 0
-
+        if (health == 0)
+        {
+            Instance.ShowLosePanel(); // Use instance to access non-static methods
+            FindObjectOfType<PlayerMovement>().KillPlayer(); // Stop player movement
+        }
     }
 
     private void ShowLosePanel()

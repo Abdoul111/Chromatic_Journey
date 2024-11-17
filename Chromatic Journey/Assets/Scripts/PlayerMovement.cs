@@ -29,7 +29,9 @@ public class PlayerMovement : MonoBehaviour
     private float maxAirTime = 1.0f; // Maximum time allowed in the air before stopping animation
     private float airTime = 0f; // Timer to track how long the player is in the air
 
-    // Start is called before the first frame update
+    // Flag to determine if the player is alive
+    private bool isAlive = true;
+
     void Start()
     {
         if (mainCamera == null)
@@ -45,9 +47,10 @@ public class PlayerMovement : MonoBehaviour
         isJumpingHash = Animator.StringToHash("isJumping");
     }
 
-    // Update is called once per frame
     private void Update()
     {
+        if (!isAlive) return; // Stop all input handling if the player is not alive
+
         horizontal = Input.GetAxisRaw("Horizontal");
         bool jumping = Input.GetKeyDown(KeyCode.Space);
 
@@ -60,7 +63,6 @@ public class PlayerMovement : MonoBehaviour
         // Check if grounded (only if not in cooldown)
         if (jumpTimer <= 0)
         {
-            // Adjust ground check to account for platform movement
             if (currentPlatform != null)
             {
                 Vector2 platformVelocity = currentPlatform.GetPlatformVelocity();
@@ -79,31 +81,31 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            airTime = 0f; // Reset air time when grounded
+            airTime = 0f;
         }
 
         // Jump logic
         if (jumping && isGrounded && jumpTimer <= 0)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-            animator.SetBool(isJumpingHash, true); // Start jump animation
-            isInAir = true; // Mark the player as in the air
-            airTime = 0f; // Reset air time
-            jumpTimer = jumpCooldown; // Start cooldown
+            animator.SetBool(isJumpingHash, true);
+            isInAir = true;
+            airTime = 0f;
+            jumpTimer = jumpCooldown;
         }
 
         // Stop jump animation if air time exceeds maxAirTime
         if (isInAir && airTime > maxAirTime)
         {
-            animator.SetBool(isJumpingHash, false); // Stop jump animation
-            isInAir = false; // Reset air status
+            animator.SetBool(isJumpingHash, false);
+            isInAir = false;
         }
 
         // Reset jump animation only when landing after being in the air
         if (isInAir && isGrounded && jumpTimer <= 0)
         {
-            animator.SetBool(isJumpingHash, false); // Stop jump animation
-            isInAir = false; // Reset air status
+            animator.SetBool(isJumpingHash, false);
+            isInAir = false;
         }
 
         Flip();
@@ -129,8 +131,11 @@ public class PlayerMovement : MonoBehaviour
 
         AlignToGround();
     }
+
     private void FixedUpdate()
     {
+        if (!isAlive) return; // Stop physics updates if the player is not alive
+
         Vector2 velocity = rb.velocity;
 
         // Move the player based on input only
@@ -154,12 +159,18 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    // Attach player to platform when standing on it
+    public void KillPlayer()
+    {
+        isAlive = false;
+        rb.velocity = Vector2.zero; // Stop movement
+        animator.SetBool(isRunningHash, false); // Stop running animation
+        animator.SetBool(isJumpingHash, false); // Stop jumping animation
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("MovingPlatform"))
         {
-            // Attach the player to the platform
             transform.parent = collision.transform;
             currentPlatform = collision.gameObject.GetComponent<MovingPlatform>();
         }
@@ -169,16 +180,13 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("MovingPlatform"))
         {
-            // Detach the player from the platform
             transform.parent = null;
             currentPlatform = null;
         }
     }
 
-
     void AlignToGround()
     {
-        // Cast a ray downward to detect the ground
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 2.0f, groundLayer);
 
         if (hit.collider != null)
@@ -188,5 +196,4 @@ public class PlayerMovement : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 0, angle - 90);
         }
     }
-
 }
