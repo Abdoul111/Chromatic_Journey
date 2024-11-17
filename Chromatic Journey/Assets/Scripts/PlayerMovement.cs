@@ -90,7 +90,6 @@ public class PlayerMovement : MonoBehaviour
             isInAir = true; // Mark the player as in the air
             airTime = 0f; // Reset air time
             jumpTimer = jumpCooldown; // Start cooldown
-            Debug.Log("Jump animation triggered.");
         }
 
         // Stop jump animation if air time exceeds maxAirTime
@@ -98,7 +97,6 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool(isJumpingHash, false); // Stop jump animation
             isInAir = false; // Reset air status
-            Debug.Log("Player exceeded max air time, stopping jump animation.");
         }
 
         // Reset jump animation only when landing after being in the air
@@ -106,7 +104,6 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool(isJumpingHash, false); // Stop jump animation
             isInAir = false; // Reset air status
-            Debug.Log("Player landed, resetting jump animation.");
         }
 
         Flip();
