@@ -34,6 +34,9 @@ public class HealthCounter : MonoBehaviour
         health -= amount;
         health = Mathf.Max(health, 0);// Clamp health to prevent negative values
         healthText.text = health.ToString();
+
+        // TODO: handle health drops to or below 0
+
     }
 
     private void ShowLosePanel()
