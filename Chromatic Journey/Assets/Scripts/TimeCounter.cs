@@ -33,7 +33,7 @@ public class TimeCounter : MonoBehaviour
 
     private void Update()
     {
-        if (isTiming)
+        if (isTiming && HealthCounter.health != 0)
         {
             timeElapsed += Time.deltaTime;
             UpdateTimerText();
