@@ -2,25 +2,38 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class FallDetector : MonoBehaviour
+public class HealthCounter : MonoBehaviour
 {
-    public GameObject losePanel; 
+    public GameObject losePanel;
+    public static Text healthText;
+    public static int health = 100;
 
-    private void Start()
+    void Start()
     {
+        if (healthText == null)
+        {
+            healthText = GameObject.Find("HealthText").GetComponent<Text>();
+        }
         if (losePanel != null)
         {
             losePanel.SetActive(false); 
         }
+        health = 100;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void Update()
     {
-        if (collision.CompareTag("Player"))
+        if (health == 0)
         {
-            HealthCounter.Damage(100);
             ShowLosePanel();
         }
+    }
+
+    public static void Damage(int amount)
+    {
+        health -= amount;
+        health = Mathf.Max(health, 0);// Clamp health to prevent negative values
+        healthText.text = health.ToString();
     }
 
     private void ShowLosePanel()
