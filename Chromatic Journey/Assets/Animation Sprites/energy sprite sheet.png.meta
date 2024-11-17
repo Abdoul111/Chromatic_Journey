@@ -1,0 +1,1777 @@
+fileFormatVersion: 2
+guid: 60b6e29fd7cd30f4e89fd65d8e636a95
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: energy sprite sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8512
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dba960dbb378b34894a2297c4e3aa71
+      internalID: 856944845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_1
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 8512
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11fcb6a834384134d9835335b4030d35
+      internalID: -401672812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_2
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 8512
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25d55e228a435e342a3a3a5acbd8c217
+      internalID: 1379821924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_3
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 8512
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 615175911e008e848a461b9ee383c026
+      internalID: 970774945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_4
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 8512
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 675971439ba0aa54fb64f3061a142514
+      internalID: -303949067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7904
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26e8887859116094587f8d6ad5cb1fa5
+      internalID: 1487231027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 7904
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa118e96156a8184bb7712aacb01c6f7
+      internalID: 887747393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_7
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 7904
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fda926796115192469ec2bb380c1cd5a
+      internalID: -388796253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_8
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 7904
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9b0c746993482149ad288a8859a70e5
+      internalID: -410215433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_9
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 7904
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0450c43c3dcaa994d839a0c28ee23ecc
+      internalID: -1203561510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7296
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 668a735b9b7938f45a56d49bfeb9fc27
+      internalID: 1292987865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 7296
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1def6a6add7c2b148b9cc94af144d0c9
+      internalID: -1995752185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_12
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 7296
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a3816960640a084da0d1625600edabd
+      internalID: 1276630745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_13
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 7296
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afce26f178a651c44adbdb25db1806c1
+      internalID: 315567276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_14
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 7296
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b51b197168710a8458fac54d3272cd8c
+      internalID: 570653155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6688
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba4e0a2854e2d7b47a33b4f46877d2df
+      internalID: 113962503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_16
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 6688
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 632234c7b4f206147b73524a61732544
+      internalID: -676548200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_17
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 6688
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 588e2c07994c36e4190d26d7c63379c5
+      internalID: 1956583865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_18
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 6688
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a38635180f778c040a842e0c675ee7bb
+      internalID: -506277884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_19
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 6688
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00e231f8eae2d694bb01a8308dac443c
+      internalID: -835841839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6080
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7cc6a2b43680764384805d73da59912
+      internalID: 1724514956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_21
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 6080
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 022d6e9cfaac7ce458a6997ee705afb6
+      internalID: -128915088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_22
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 6080
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d03159f722f49ac42aebc712d7ae9e95
+      internalID: 1153950004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_23
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 6080
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acee6509f01bc24479e0e24cc65e8c36
+      internalID: 458401162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_24
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 6080
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf13ae88f3a595c49adbe026d1098a6b
+      internalID: -848390392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5472
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f135699538572d47924ecd53a2fdb86
+      internalID: 1347058104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_26
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 5472
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f979c9085289d5542a2cf3c22022b6bb
+      internalID: 1603184878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_27
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 5472
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d39ee5eacbd394c44bd8b06dc0fb8a05
+      internalID: -1337689251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_28
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 5472
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 145a0505b58f1d74fb2e6577872425c6
+      internalID: -1819051947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_29
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 5472
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8738e6186d5e434ab2aa2201a71996e
+      internalID: 936541098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4864
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a211879b104a9a84f89130e6c95bd4a1
+      internalID: 1274185396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_31
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 4864
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a38ab3662a93ddf48acb5fd96eea32e2
+      internalID: -4920386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_32
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 4864
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02d123ec441abfb4cae122bbde8b3982
+      internalID: 597480501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_33
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 4864
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63459f32e8bd1004dbf7341f03c627bd
+      internalID: -2047594791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_34
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 4864
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8c293bf21e79ed409c91b2a2df91202
+      internalID: 199415431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4256
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7ac18c2fcba1c44e93bb1f95f4a392c
+      internalID: -2013407329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_36
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 4256
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0b0894ce95e3b7489066d35e01fba17
+      internalID: 63587513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_37
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 4256
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b074ea3e38c5624cb883be03bff6814
+      internalID: -579009108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_38
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 4256
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5859f6b263b906045aa375ea2eae4777
+      internalID: -504000588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_39
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 4256
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0352bc70eb4879d4fbc5ef04fb1e60c5
+      internalID: 1410169866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3648
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bd7cafb6ac386f47b3ba10a0f4e3b74
+      internalID: 1000465458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_41
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 3648
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd87db18aae5be84dbae9b8b0afb549c
+      internalID: -799978526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_42
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 3648
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69491a25d11a90748803eed9318a2e4f
+      internalID: -1739494544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_43
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 3648
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4664d275451bbb6429ecbf8c6b4ce1d3
+      internalID: -1124117988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_44
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 3648
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47cf89a2af4380e40b0b6ae67fc1c2d8
+      internalID: -1993400247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3040
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f82f55d3d3dc9543bde19fc7313c364
+      internalID: -649342868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_46
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 3040
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69d38be3ce7c01d41bbb1d92fb2e2a59
+      internalID: -99541760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_47
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 3040
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 330887b9a5a8eb846bf0aeff67a5fc47
+      internalID: -1750483291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_48
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 3040
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7dbda5ff57399e4aadb000fbf9268c2
+      internalID: 218989116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_49
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 3040
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67f91eba92668964d96c76a2a78acf7f
+      internalID: -2000203004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2432
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ca0832c0bdd1544cb8b64cc3fb7b086
+      internalID: 699853188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_51
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 2432
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f26ca3dfad4665e4584a971265e52a1a
+      internalID: -108742858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_52
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 2432
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8618b95db8dc5b4b9f03a64491aca0f
+      internalID: -849718756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_53
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 2432
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22f66af2b215c1f4f9edce7977e12c30
+      internalID: 660244525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_54
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 2432
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bfadc90b50ce7042ad5fd9d4e845c64
+      internalID: 1806181497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1824
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4538f34261874c428c92b7f00d6d724
+      internalID: 1870642644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_56
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 1824
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eea0a0f12c724b46bdbac585fd54f3c
+      internalID: -981319378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_57
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 1824
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06041c0b4d56fe64d9eabb4ba98b1fb0
+      internalID: -164730881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_58
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 1824
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 117fe4898690386458425aa4521c4c77
+      internalID: 940013569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_59
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 1824
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2263121ab5eadd4585b7337f73bacc6
+      internalID: -879975962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1216
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f04bf0cfe4da094d88cfc3597240ca6
+      internalID: 860490943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_61
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 1216
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d429c0e9abbd04242b756223c9dccca7
+      internalID: 376089053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_62
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 1216
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 782a119c892f22543930f094963dae6e
+      internalID: -921937651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_63
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 1216
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a548d6c395d8f2418c264d97180d2ac
+      internalID: -1108464148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_64
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 1216
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7267afce341667344ba642a74fb38ee8
+      internalID: -619937400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_65
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 608
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57d50760e64c1984380381f34722f7a3
+      internalID: 1650064164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_66
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 608
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1278483df5c18194cb2fbc1503a36c40
+      internalID: -2091563826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_67
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 608
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16c5591c5a44c92439edf436d2bb53dc
+      internalID: -1348204334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_68
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 608
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7f8d392fad8b464b88208c54b2707d0
+      internalID: 2083743439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_69
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 608
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8357fc631123adf40a05a9935f81a31b
+      internalID: -780591004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57258c37d2f70bf4aabbeee5cfeb9375
+      internalID: -1062198094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_71
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 0
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27d54206f4147f942be842d1bcfc4aa1
+      internalID: 653049628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_72
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 0
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c51e3d970a6836e4bad9b3f95f4f0a4c
+      internalID: 983902142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_73
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 0
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c45e2a81479e4c4b889ca87102cad74
+      internalID: 1112712297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy sprite sheet_74
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 0
+        width: 1080
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63485329b9ccbdb469c760af88a85d92
+      internalID: 189983107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      energy sprite sheet_0: 856944845
+      energy sprite sheet_1: -401672812
+      energy sprite sheet_10: 1292987865
+      energy sprite sheet_11: -1995752185
+      energy sprite sheet_12: 1276630745
+      energy sprite sheet_13: 315567276
+      energy sprite sheet_14: 570653155
+      energy sprite sheet_15: 113962503
+      energy sprite sheet_16: -676548200
+      energy sprite sheet_17: 1956583865
+      energy sprite sheet_18: -506277884
+      energy sprite sheet_19: -835841839
+      energy sprite sheet_2: 1379821924
+      energy sprite sheet_20: 1724514956
+      energy sprite sheet_21: -128915088
+      energy sprite sheet_22: 1153950004
+      energy sprite sheet_23: 458401162
+      energy sprite sheet_24: -848390392
+      energy sprite sheet_25: 1347058104
+      energy sprite sheet_26: 1603184878
+      energy sprite sheet_27: -1337689251
+      energy sprite sheet_28: -1819051947
+      energy sprite sheet_29: 936541098
+      energy sprite sheet_3: 970774945
+      energy sprite sheet_30: 1274185396
+      energy sprite sheet_31: -4920386
+      energy sprite sheet_32: 597480501
+      energy sprite sheet_33: -2047594791
+      energy sprite sheet_34: 199415431
+      energy sprite sheet_35: -2013407329
+      energy sprite sheet_36: 63587513
+      energy sprite sheet_37: -579009108
+      energy sprite sheet_38: -504000588
+      energy sprite sheet_39: 1410169866
+      energy sprite sheet_4: -303949067
+      energy sprite sheet_40: 1000465458
+      energy sprite sheet_41: -799978526
+      energy sprite sheet_42: -1739494544
+      energy sprite sheet_43: -1124117988
+      energy sprite sheet_44: -1993400247
+      energy sprite sheet_45: -649342868
+      energy sprite sheet_46: -99541760
+      energy sprite sheet_47: -1750483291
+      energy sprite sheet_48: 218989116
+      energy sprite sheet_49: -2000203004
+      energy sprite sheet_5: 1487231027
+      energy sprite sheet_50: 699853188
+      energy sprite sheet_51: -108742858
+      energy sprite sheet_52: -849718756
+      energy sprite sheet_53: 660244525
+      energy sprite sheet_54: 1806181497
+      energy sprite sheet_55: 1870642644
+      energy sprite sheet_56: -981319378
+      energy sprite sheet_57: -164730881
+      energy sprite sheet_58: 940013569
+      energy sprite sheet_59: -879975962
+      energy sprite sheet_6: 887747393
+      energy sprite sheet_60: 860490943
+      energy sprite sheet_61: 376089053
+      energy sprite sheet_62: -921937651
+      energy sprite sheet_63: -1108464148
+      energy sprite sheet_64: -619937400
+      energy sprite sheet_65: 1650064164
+      energy sprite sheet_66: -2091563826
+      energy sprite sheet_67: -1348204334
+      energy sprite sheet_68: 2083743439
+      energy sprite sheet_69: -780591004
+      energy sprite sheet_7: -388796253
+      energy sprite sheet_70: -1062198094
+      energy sprite sheet_71: 653049628
+      energy sprite sheet_72: 983902142
+      energy sprite sheet_73: 1112712297
+      energy sprite sheet_74: 189983107
+      energy sprite sheet_8: -410215433
+      energy sprite sheet_9: -1203561510
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
