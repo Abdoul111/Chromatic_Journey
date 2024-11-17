@@ -38,11 +38,14 @@ Material:
     m_Ints: []
     m_Floats:
     - _HighlilghtSpread: 2.5
+    - _MovementSpeed: 0.5
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _Scale: 2
+    - _StartTime: 15
     m_Colors:
     - _BaseColor: {r: 0.7372549, g: 0.1490196, b: 0, a: 0}
-    - _HighlightsColor: {r: 1.754717, g: 0.8518251, b: 0.1407085, a: 0}
+    - _HighlightsColor: {r: 3.509434, g: 1.70365, b: 0.2814169, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &3349629411024864127
 MonoBehaviour:
