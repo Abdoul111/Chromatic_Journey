@@ -2383,6 +2383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0410b54886177fd4ca47e02f1c7d5e5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damagePerSecond: 10
 --- !u!61 &618615219
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2489,7 +2490,7 @@ Transform:
   m_GameObject: {fileID: 618615217}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 59.56, y: -1.38, z: 0}
+  m_LocalPosition: {x: 59.56, y: -3.18, z: 0}
   m_LocalScale: {x: 3.7825, y: 1.7015, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3795,7 +3796,7 @@ GameObject:
   - component: {fileID: 1770277228}
   m_Layer: 6
   m_Name: GroundSpriteOpen
-  m_TagString: Untagged
+  m_TagString: Sloped
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5680,3 +5681,4 @@ SceneRoots:
   - {fileID: 2208746757819202585}
   - {fileID: 396313700}
   - {fileID: 1244980122}
+  - {fileID: 618615221}
