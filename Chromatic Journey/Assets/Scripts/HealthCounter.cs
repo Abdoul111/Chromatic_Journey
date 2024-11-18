@@ -1,12 +1,13 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System;
 
 public class HealthCounter : MonoBehaviour
 {
     public GameObject losePanel;
     public Text healthText;
-    public static int health = 100;
+    public static float health = 100;
 
     // Singleton instance
     public static HealthCounter Instance { get; private set; }
@@ -36,13 +37,13 @@ public class HealthCounter : MonoBehaviour
         health = 100;
     }
 
-    public static void Damage(int amount)
+    public static void Damage(float amount)
     {
         health -= amount;
         health = Mathf.Max(health, 0); // Clamp health to prevent negative values
         if (Instance.healthText != null)
         {
-            Instance.healthText.text = health.ToString();
+            Instance.healthText.text = Math.Round(health).ToString();
         }
 
         if (health == 0)

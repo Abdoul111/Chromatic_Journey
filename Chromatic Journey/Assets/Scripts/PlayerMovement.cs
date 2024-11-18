@@ -128,8 +128,6 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool(isRunningHash, false);
         }
-
-        AlignToGround();
     }
 
     private void FixedUpdate()
@@ -182,18 +180,6 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.parent = null;
             currentPlatform = null;
-        }
-    }
-
-    void AlignToGround()
-    {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 2.0f, groundLayer);
-
-        if (hit.collider != null)
-        {
-            Vector2 groundNormal = hit.normal;
-            float angle = Mathf.Atan2(groundNormal.y, groundNormal.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0, 0, angle - 90);
         }
     }
 }
