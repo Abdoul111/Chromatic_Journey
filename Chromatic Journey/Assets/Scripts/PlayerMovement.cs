@@ -25,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
     public AudioClip footstepAudioSound;
     private AudioSource landingAudioSource;
     public AudioClip landingAudioSound;
+    private AudioSource jumpAudioSource;
+    public AudioClip jumpAudioSound;
     private float groundCheckRadius = 0.5f;
     private bool isGrounded;
     private bool isInAir = false;
@@ -51,10 +53,11 @@ public class PlayerMovement : MonoBehaviour
         isRunningHash = Animator.StringToHash("isRunning");
         isJumpingHash = Animator.StringToHash("isJumping");
         AudioSource[] audioSources = GetComponents<AudioSource>();
-        if (audioSources.Length >= 2)
+        if (audioSources.Length >= 3)
         {
             footstepAudioSource = audioSources[1]; // First AudioSource for footsteps
-            landingAudioSource = audioSources[2]; // Third AudioSource for landing
+            landingAudioSource = audioSources[2]; // Second AudioSource for landing
+            jumpAudioSource = audioSources[3]; // Third AudioSource for jumping
         }
     }
 
@@ -125,6 +128,7 @@ public class PlayerMovement : MonoBehaviour
         // Jump logic
         if (jumping && isGrounded && jumpTimer <= 0)
         {
+            PlayJumpAudio();
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
             animator.SetBool(isJumpingHash, true);
             isInAir = true;
@@ -207,6 +211,16 @@ public class PlayerMovement : MonoBehaviour
             landingAudioSource.Stop();
             landingAudioSource.clip = landingAudioSound; // Assign the landing sound
             landingAudioSource.Play(); // Play the sound
+        }
+    }
+
+    private void PlayJumpAudio()
+    {
+        if (jumpAudioSource != null)
+        {
+            jumpAudioSource.Stop();
+            jumpAudioSource.clip = jumpAudioSound; // Assign the landing sound
+            jumpAudioSource.Play(); // Play the sound
         }
     }
 

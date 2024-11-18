@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System;
+using System.Collections;
 
 public class HealthCounter : MonoBehaviour
 {
@@ -10,7 +11,12 @@ public class HealthCounter : MonoBehaviour
     public static float health = 100;
     private AudioSource deathAudioSource;
     public AudioClip deathAudioSound;
+    private AudioSource damageAudioSource;
+    public AudioClip damageAudioSound;
     public int deathCount = 0;
+
+    // Reference to the player's SpriteRenderer
+    private SpriteRenderer playerSprite;
 
     // Singleton instance
     public static HealthCounter Instance { get; private set; }
@@ -30,6 +36,7 @@ public class HealthCounter : MonoBehaviour
     void Start()
     {
         deathCount = 0;
+
         // Initialize UI components
         if (healthText == null)
         {
@@ -44,7 +51,19 @@ public class HealthCounter : MonoBehaviour
         health = 100;
 
         // Assign AudioSource
-        deathAudioSource = GetComponent<AudioSource>();
+        AudioSource[] audioSourcesHealth = GetComponents<AudioSource>();
+        if (audioSourcesHealth.Length >= 2)
+        {
+            deathAudioSource = audioSourcesHealth[0]; // First AudioSource for death
+            damageAudioSource = audioSourcesHealth[1]; // Second AudioSource for damage
+        }
+
+        // Find player's SpriteRenderer
+        GameObject player = GameObject.FindWithTag("Player");
+        if (player != null)
+        {
+            playerSprite = player.GetComponent<SpriteRenderer>();
+        }
     }
 
     public static void Damage(float amount)
@@ -61,7 +80,8 @@ public class HealthCounter : MonoBehaviour
         // Check if player is dead
         if (health == 0)
         {
-            if (Instance.deathCount == 0){
+            if (Instance.deathCount == 0)
+            {
                 Instance.ShowLosePanel(); // Use instance to access non-static methods
 
                 // Stop player movement
@@ -80,6 +100,21 @@ public class HealthCounter : MonoBehaviour
                 Instance.deathCount++;
             }
         }
+
+        if (Instance.deathCount == 0)
+        {
+            if (Instance.damageAudioSource != null && !Instance.damageAudioSource.isPlaying)
+            {
+                Instance.damageAudioSource.clip = Instance.damageAudioSound; // Assign the damage sound
+                Instance.damageAudioSource.Play(); // Play the sound
+            }
+        }
+
+        // Trigger the red hue effect
+        if (Instance.playerSprite != null)
+        {
+            Instance.StartCoroutine(Instance.ChangeToRed());
+        }
     }
 
     private void ShowLosePanel()
@@ -94,5 +129,19 @@ public class HealthCounter : MonoBehaviour
     public void ReloadScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    // Coroutine to change color to red and revert back
+    private IEnumerator ChangeToRed()
+    {
+        if (playerSprite != null)
+        {
+            Color originalColor = playerSprite.color; // Save the original color
+            playerSprite.color = Color.red; // Change to red
+            if (Instance.deathCount == 0){
+                yield return new WaitForSeconds(0.25f); // Wait for 0.5 seconds
+                playerSprite.color = originalColor; // Revert to original color
+            }
+        }
     }
 }
