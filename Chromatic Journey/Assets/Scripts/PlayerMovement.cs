@@ -21,6 +21,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private LayerMask groundLayer; // Assign ground layer in the inspector
     [SerializeField] private Transform groundCheck; // Assign a ground-check transform
+    [SerializeField] private float footstepCooldown = 0.5f; // Time between footsteps
+    private AudioSource footstepAudioSource;
+    public AudioClip footstepAudioSound;
+    private AudioSource landingAudioSource;
+    public AudioClip landingAudioSound;
     private float groundCheckRadius = 0.1f;
     private bool isGrounded;
     private bool isInAir = false;
@@ -28,9 +33,8 @@ public class PlayerMovement : MonoBehaviour
     private float jumpTimer = 0f; // Timer to track cooldown
     private float maxAirTime = 1.0f; // Maximum time allowed in the air before stopping animation
     private float airTime = 0f; // Timer to track how long the player is in the air
-
-    // Flag to determine if the player is alive
-    private bool isAlive = true;
+    private bool isAlive = true; // Flag to determine if the player is alive
+    private float footstepTimer = 0f; // Timer to track cooldown
 
     void Start()
     {
@@ -45,6 +49,12 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         isRunningHash = Animator.StringToHash("isRunning");
         isJumpingHash = Animator.StringToHash("isJumping");
+        AudioSource[] audioSources = GetComponents<AudioSource>();
+        if (audioSources.Length >= 2)
+        {
+            footstepAudioSource = audioSources[0]; // First AudioSource for footsteps
+            landingAudioSource = audioSources[2]; // Third AudioSource for landing
+        }
     }
 
     private void Update()
@@ -53,6 +63,25 @@ public class PlayerMovement : MonoBehaviour
 
         horizontal = Input.GetAxisRaw("Horizontal");
         bool jumping = Input.GetKeyDown(KeyCode.Space);
+
+        // Footstep logic: Play sound only if grounded and moving with input
+        if (isGrounded && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)))
+        {
+            footstepTimer -= Time.deltaTime;
+            if (footstepTimer <= 0)
+            {
+                PlayFootstepAudio();
+                footstepTimer = footstepCooldown; // Reset timer
+            }
+        }
+        else
+        {
+            if (footstepAudioSource != null && footstepAudioSource.isPlaying)
+            {
+                footstepAudioSource.Stop();
+            }
+            footstepTimer = 0f; // Reset timer
+        }
 
         // Decrease the jump timer
         if (jumpTimer > 0)
@@ -106,6 +135,7 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool(isJumpingHash, false);
             isInAir = false;
+            PlayLandingAudio();
         }
 
         Flip();
@@ -127,6 +157,38 @@ public class PlayerMovement : MonoBehaviour
         else if (isRunning && !moving)
         {
             animator.SetBool(isRunningHash, false);
+        }
+        
+        AlignToGround();
+    }
+
+    void AlignToGround()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 2.0f, groundLayer);
+        if (hit.collider != null)
+        {
+            Vector2 groundNormal = hit.normal;
+            float angle = Mathf.Atan2(groundNormal.y, groundNormal.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0, 0, angle - 90);
+        }
+    }
+
+    private void PlayFootstepAudio()
+    {
+        if (footstepAudioSource != null && !footstepAudioSource.isPlaying)
+        {
+            footstepAudioSource.clip = footstepAudioSound; // Assign the footstep sound
+            footstepAudioSource.Play(); // Play the sound
+        }
+    }
+
+    private void PlayLandingAudio()
+    {
+        if (landingAudioSource != null)
+        {
+            landingAudioSource.Stop();
+            landingAudioSource.clip = landingAudioSound; // Assign the landing sound
+            landingAudioSource.Play(); // Play the sound
         }
     }
 

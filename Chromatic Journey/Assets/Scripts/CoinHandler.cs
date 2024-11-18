@@ -6,12 +6,13 @@ public class coinHandler : MonoBehaviour
     public Text coinText;
     private int coinsCollected = 0;
     public AudioClip pickupSound;
-    private AudioSource audioSource;
+    private AudioSource pickupAudioSource; // Dedicated AudioSource for pickup sounds
     public GameObject pickupParticle;
 
     private void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        // Add or get a dedicated AudioSource for pickup sounds
+        pickupAudioSource = gameObject.AddComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -22,13 +23,12 @@ public class coinHandler : MonoBehaviour
             if (pickupParticle != null)
             {
                 Instantiate(pickupParticle, other.transform.position, Quaternion.identity);
-                Destroy(pickupParticle, 2f);
             }
             coinsCollected++;
             coinText.text = "x" + coinsCollected.ToString();
-            if (pickupSound != null && audioSource != null)
+            if (pickupSound != null && pickupAudioSource != null)
             {
-                audioSource.PlayOneShot(pickupSound);
+                pickupAudioSource.PlayOneShot(pickupSound);
             }
             Destroy(other.gameObject);
         }
