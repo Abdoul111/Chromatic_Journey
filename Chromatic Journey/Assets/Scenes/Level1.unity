@@ -3178,7 +3178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _img: {fileID: 608855625}
-  _x: 0.01
+  _x: 0.0025
   _y: 0
 --- !u!114 &608855625
 MonoBehaviour:
@@ -15444,7 +15444,7 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 1, g: 0, b: 0, a: 1}
+      minColor: {r: 1, g: 0, b: 0, a: 0.5019608}
       maxColor: {r: 1, g: 0, b: 0, a: 0.039215688}
       maxGradient:
         serializedVersion: 2
