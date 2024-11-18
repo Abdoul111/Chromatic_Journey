@@ -14,6 +14,7 @@ public class HealthCounter : MonoBehaviour
     private AudioSource damageAudioSource;
     public AudioClip damageAudioSound;
     public int deathCount = 0;
+    private bool isRed = false; // Flag to check if player is already red
 
     // Reference to the player's SpriteRenderer
     private SpriteRenderer playerSprite;
@@ -77,9 +78,12 @@ public class HealthCounter : MonoBehaviour
             Instance.healthText.text = Math.Round(health).ToString();
         }
 
+        Debug.Log(health);
+
         // Check if player is dead
-        if (health == 0)
+        if (health < 0.2f)
         {
+            // If player's first death in instance (to not be affected by outside damage after death)
             if (Instance.deathCount == 0)
             {
                 Instance.ShowLosePanel(); // Use instance to access non-static methods
@@ -101,6 +105,7 @@ public class HealthCounter : MonoBehaviour
             }
         }
 
+        // If damaged, but not dead
         if (Instance.deathCount == 0)
         {
             if (Instance.damageAudioSource != null && !Instance.damageAudioSource.isPlaying)
@@ -134,14 +139,16 @@ public class HealthCounter : MonoBehaviour
     // Coroutine to change color to red and revert back
     private IEnumerator ChangeToRed()
     {
-        if (playerSprite != null)
+        if (deathCount == 1)
+            playerSprite.color = Color.red; // Change to red
+        if (playerSprite != null && !isRed)
         {
+            isRed = true; // Set the flag
             Color originalColor = playerSprite.color; // Save the original color
             playerSprite.color = Color.red; // Change to red
-            if (Instance.deathCount == 0){
-                yield return new WaitForSeconds(0.25f); // Wait for 0.5 seconds
-                playerSprite.color = originalColor; // Revert to original color
-            }
+            yield return new WaitForSeconds(0.25f); // Wait for 0.25 seconds
+            playerSprite.color = originalColor; // Revert to original color
+            isRed = false; // Reset the flag
         }
     }
 }
