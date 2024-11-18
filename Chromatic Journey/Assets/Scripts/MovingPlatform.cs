@@ -10,6 +10,9 @@ public class MovingPlatform : MonoBehaviour
     private Vector3 previousPosition;
     private Vector2 smoothedVelocity; // To smooth out erratic velocity changes
     private bool isMovingForward = true; // Track movement direction
+    public bool isMovingOnceOnly = false;
+    private bool movementEnded = false;
+    private bool startMoving = false;
 
     private void Start()
     {
@@ -20,12 +23,19 @@ public class MovingPlatform : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // true when the player solves the puzzle
+        if (isMovingOnceOnly && movementEnded) return;
+
+        // true when the platform is still not moving
+        if (isMovingOnceOnly && !startMoving) return;
+
         // Move the platform
         transform.position += direction * speed * Time.deltaTime;
 
         // Reverse direction at endpoints
         if (Vector3.Distance(transform.position, endPoint.position) < 0.1f && isMovingForward)
         {
+            movementEnded = true;
             direction = (startPoint.position - endPoint.position).normalized;
             isMovingForward = false;
         }
@@ -39,6 +49,15 @@ public class MovingPlatform : MonoBehaviour
         Vector2 rawVelocity = ((Vector2)(transform.position - previousPosition)) / Time.fixedDeltaTime;
         smoothedVelocity = Vector2.Lerp(smoothedVelocity, rawVelocity, 0.2f); // Smooth changes
         previousPosition = transform.position;
+    }
+
+    public void TriggerMovement()
+    {
+        if (!startMoving && !movementEnded)
+        {
+            Debug.Log("Platform movement triggered.");
+            startMoving = true;
+        }
     }
 
     public Vector2 GetPlatformVelocity()
