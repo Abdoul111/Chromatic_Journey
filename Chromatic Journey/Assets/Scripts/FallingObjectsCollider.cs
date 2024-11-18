@@ -10,7 +10,6 @@ public class FallingObjectsCollider : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             HealthCounter.Damage(10);
-            Debug.Log("Player Damaged");
         }
 
         Destroy(gameObject);

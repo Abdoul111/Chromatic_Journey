@@ -61,7 +61,6 @@ public class LavaDamage2D : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             HealthCounter.Damage(10 * Time.deltaTime);
-            Debug.Log("Player Damaged");
         }
     }
 
