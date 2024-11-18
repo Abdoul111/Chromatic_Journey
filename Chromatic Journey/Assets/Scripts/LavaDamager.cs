@@ -13,20 +13,4 @@ public class LavaDamage2D : MonoBehaviour
             Debug.Log("Player Damaged");
         }
     }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            Debug.Log("Player entered the lava!");
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            Debug.Log("Player left the lava!");
-        }
-    }
 }
