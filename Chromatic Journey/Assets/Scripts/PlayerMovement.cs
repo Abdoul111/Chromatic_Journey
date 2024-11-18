@@ -33,7 +33,9 @@ public class PlayerMovement : MonoBehaviour
     private float jumpTimer = 0f; // Timer to track cooldown
     private float maxAirTime = 1.0f; // Maximum time allowed in the air before stopping animation
     private float airTime = 0f; // Timer to track how long the player is in the air
-    private bool isAlive = true; // Flag to determine if the player is alive
+    public bool isBusy = false; // to stop character interaction when it is making input sequences to solve puzzles
+    // Flag to determine if the player is alive
+    private bool isAlive = true;
     private float footstepTimer = 0f; // Timer to track cooldown
 
     void Start()
@@ -59,8 +61,16 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (!isAlive) return; // Stop all input handling if the player is not alive
+        if (!isAlive || isBusy)
+        {
+            animator.SetBool(isJumpingHash, false);
+            animator.SetBool(isRunningHash, false);
+            isInAir = false;
 
+
+
+            return; // Stop all input handling if the player is not alive
+        }
         horizontal = Input.GetAxisRaw("Horizontal");
         bool jumping = Input.GetKeyDown(KeyCode.Space);
 
@@ -194,8 +204,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (!isAlive) return; // Stop physics updates if the player is not alive
-
+        if (!isAlive || isBusy)
+        {
+            rb.velocity = Vector2.zero;
+            return; // Stop physics updates if the player is not alive
+        }
         Vector2 velocity = rb.velocity;
 
         // Move the player based on input only
