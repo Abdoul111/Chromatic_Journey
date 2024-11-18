@@ -10,7 +10,6 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] Camera mainCamera;
     private Vector3 cameraOffset = new Vector3(0, 5, -10);
-
     private float horizontal;
     private float speed = 7f;
     private float jumpingPower = 15f;
@@ -54,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
         AudioSource[] audioSources = GetComponents<AudioSource>();
         if (audioSources.Length >= 2)
         {
-            footstepAudioSource = audioSources[0]; // First AudioSource for footsteps
+            footstepAudioSource = audioSources[1]; // First AudioSource for footsteps
             landingAudioSource = audioSources[2]; // Third AudioSource for landing
         }
     }
@@ -191,7 +190,6 @@ public class PlayerMovement : MonoBehaviour
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
     }
-
 
     private void PlayFootstepAudio()
     {
