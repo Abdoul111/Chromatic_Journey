@@ -8,6 +8,9 @@ public class HealthCounter : MonoBehaviour
     public GameObject losePanel;
     public Text healthText;
     public static float health = 100;
+    private AudioSource deathAudioSource;
+    public AudioClip deathAudioSound;
+    public int deathCount = 0;
 
     // Singleton instance
     public static HealthCounter Instance { get; private set; }
@@ -26,30 +29,56 @@ public class HealthCounter : MonoBehaviour
 
     void Start()
     {
+        deathCount = 0;
+        // Initialize UI components
         if (healthText == null)
         {
             healthText = GameObject.Find("HealthText").GetComponent<Text>();
         }
         if (losePanel != null)
         {
-            losePanel.SetActive(false); 
+            losePanel.SetActive(false);
         }
+
+        // Reset health
         health = 100;
+
+        // Assign AudioSource
+        deathAudioSource = GetComponent<AudioSource>();
     }
 
     public static void Damage(float amount)
     {
         health -= amount;
         health = Mathf.Max(health, 0); // Clamp health to prevent negative values
+
+        // Update health UI
         if (Instance.healthText != null)
         {
             Instance.healthText.text = Math.Round(health).ToString();
         }
 
+        // Check if player is dead
         if (health == 0)
         {
-            Instance.ShowLosePanel(); // Use instance to access non-static methods
-            FindObjectOfType<PlayerMovement>().KillPlayer(); // Stop player movement
+            if (Instance.deathCount == 0){
+                Instance.ShowLosePanel(); // Use instance to access non-static methods
+
+                // Stop player movement
+                PlayerMovement player = FindObjectOfType<PlayerMovement>();
+                if (player != null)
+                {
+                    player.KillPlayer();
+                }
+
+                // Play death sound
+                if (Instance.deathAudioSource != null && !Instance.deathAudioSource.isPlaying)
+                {
+                    Instance.deathAudioSource.clip = Instance.deathAudioSound; // Assign the death sound
+                    Instance.deathAudioSource.Play(); // Play the sound
+                }
+                Instance.deathCount++;
+            }
         }
     }
 
