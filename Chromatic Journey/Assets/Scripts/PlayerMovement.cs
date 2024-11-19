@@ -10,7 +10,6 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] Camera mainCamera;
     private Vector3 cameraOffset = new Vector3(0, 5, -10);
-
     private float horizontal;
     private float speed = 7f;
     private float jumpingPower = 15f;
@@ -26,7 +25,9 @@ public class PlayerMovement : MonoBehaviour
     public AudioClip footstepAudioSound;
     private AudioSource landingAudioSource;
     public AudioClip landingAudioSound;
-    private float groundCheckRadius = 0.1f;
+    private AudioSource jumpAudioSource;
+    public AudioClip jumpAudioSound;
+    private float groundCheckRadius = 0.5f;
     private bool isGrounded;
     private bool isInAir = false;
     private float jumpCooldown = 0.2f; // Minimum delay before checking ground
@@ -52,10 +53,11 @@ public class PlayerMovement : MonoBehaviour
         isRunningHash = Animator.StringToHash("isRunning");
         isJumpingHash = Animator.StringToHash("isJumping");
         AudioSource[] audioSources = GetComponents<AudioSource>();
-        if (audioSources.Length >= 2)
+        if (audioSources.Length >= 3)
         {
-            footstepAudioSource = audioSources[0]; // First AudioSource for footsteps
-            landingAudioSource = audioSources[2]; // Third AudioSource for landing
+            footstepAudioSource = audioSources[1]; // First AudioSource for footsteps
+            landingAudioSource = audioSources[2]; // Second AudioSource for landing
+            jumpAudioSource = audioSources[3]; // Third AudioSource for jumping
         }
     }
 
@@ -126,6 +128,7 @@ public class PlayerMovement : MonoBehaviour
         // Jump logic
         if (jumping && isGrounded && jumpTimer <= 0)
         {
+            PlayJumpAudio();
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
             animator.SetBool(isJumpingHash, true);
             isInAir = true;
@@ -137,6 +140,7 @@ public class PlayerMovement : MonoBehaviour
         if (isInAir && airTime > maxAirTime)
         {
             animator.SetBool(isJumpingHash, false);
+            animator.SetBool(isRunningHash, false);
             isInAir = false;
         }
 
@@ -168,18 +172,26 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool(isRunningHash, false);
         }
-        
+
         AlignToGround();
     }
 
     void AlignToGround()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 2.0f, groundLayer);
-        if (hit.collider != null)
+        if (isGrounded) // Only align to ground when grounded
         {
-            Vector2 groundNormal = hit.normal;
-            float angle = Mathf.Atan2(groundNormal.y, groundNormal.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(0, 0, angle - 90);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 2.0f, groundLayer);
+            if (hit.collider != null)
+            {
+                Vector2 groundNormal = hit.normal;
+                float angle = Mathf.Atan2(groundNormal.y, groundNormal.x) * Mathf.Rad2Deg;
+                transform.rotation = Quaternion.Euler(0, 0, angle - 90);
+            }
+        }
+        else
+        {
+            // Reset rotation to default (standing upright) when in the air
+            transform.rotation = Quaternion.Euler(0, 0, 0);
         }
     }
 
@@ -199,6 +211,16 @@ public class PlayerMovement : MonoBehaviour
             landingAudioSource.Stop();
             landingAudioSource.clip = landingAudioSound; // Assign the landing sound
             landingAudioSource.Play(); // Play the sound
+        }
+    }
+
+    private void PlayJumpAudio()
+    {
+        if (jumpAudioSource != null)
+        {
+            jumpAudioSource.Stop();
+            jumpAudioSource.clip = jumpAudioSound; // Assign the landing sound
+            jumpAudioSource.Play(); // Play the sound
         }
     }
 
