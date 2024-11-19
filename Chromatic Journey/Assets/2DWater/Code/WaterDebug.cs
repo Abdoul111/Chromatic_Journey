@@ -15,7 +15,7 @@ namespace Bundos.WaterSystem
         private void ValidateSetup()
         {
             // Check Water Object Setup
-            var collider = GetComponent<Collider2D>();
+            var collider = GetComponent<BoxCollider2D>();
             if (collider == null)
             {
                 Debug.LogError("Water object is missing a Collider2D component!");
