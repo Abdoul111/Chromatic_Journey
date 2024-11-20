@@ -20,7 +20,7 @@ public class FinishLine2 : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene("Level 2 Concept");
+            SceneManager.LoadScene("Level3");
         }
     }
 }
