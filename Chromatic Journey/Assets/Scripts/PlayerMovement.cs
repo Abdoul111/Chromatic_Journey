@@ -264,7 +264,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("MovingPlatform"))
+        if (collision.gameObject.CompareTag("MovingPlatform") || collision.gameObject.CompareTag("MovingBoat"))
         {
             transform.parent = collision.transform;
             currentPlatform = collision.gameObject.GetComponent<MovingPlatform>();
@@ -273,7 +273,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("MovingPlatform"))
+        if (collision.gameObject.CompareTag("MovingPlatform") || collision.gameObject.CompareTag("MovingBoat"))
         {
             transform.parent = null;
             currentPlatform = null;
