@@ -8,6 +8,7 @@ TagManager:
   - MovingPlatform
   - Coin
   - Sloped
+  - PopupManager
   layers:
   - Default
   - TransparentFX
