@@ -38,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
     // Flag to determine if the player is alive
     private bool isAlive = true;
     private float footstepTimer = 0f; // Timer to track cooldown
+    [HideInInspector] public bool jumping = false;
 
     void Start()
     {
@@ -74,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
             return; // Stop all input handling if the player is not alive
         }
         horizontal = Input.GetAxisRaw("Horizontal");
-        bool jumping = Input.GetKeyDown(KeyCode.Space);
+        jumping = Input.GetKeyDown(KeyCode.Space);
 
         // Footstep logic: Play sound only if grounded and moving with input
         if (isGrounded && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)))
