@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class BackgroundController : MonoBehaviour
 {
-    private float startPos, length;
+    private float startPosX, startPosY, lengthX, lengthY;
     public GameObject cam;
-    public float parallaxEffect; // The speed at which the background should move relative to the camera
-
-    public PlayerMovement PlayerMovement;
-
+    public float parallaxEffectX; // The speed at which the background should move relative to the camera for X
+    public float parallaxEffectY; // The speed at which the background should move relative to the camera for Y
 
     // Start is called before the first frame update
     void Start()
     {
-        startPos = transform.position.x;
-        length = GetComponent<RectTransform>().anchoredPosition.x;
+        startPosX = transform.position.x;
+        startPosY = transform.position.y;
+        lengthX = GetComponent<RectTransform>().anchoredPosition.x;
+        lengthY = GetComponent<RectTransform>().anchoredPosition.y;
         
     }
 
@@ -23,25 +23,32 @@ public class BackgroundController : MonoBehaviour
     void FixedUpdate()
     {
         // Calculate distance background move based on cam movement
-        float distance = cam.transform.position.x * parallaxEffect; // 0 = move with cam || 1 = won't move || 0.5 = half
-        float movement = cam.transform.position.x * (1 - parallaxEffect);
+        float distanceX = cam.transform.position.x * parallaxEffectX; // 0 = move with cam || 1 = won't move || 0.5 = half
+        float movementX = cam.transform.position.x * (1 - parallaxEffectX);
 
-        transform.position = new Vector3(startPos + distance, transform.position.y, transform.position.z);
+        float distanceY = cam.transform.position.y * parallaxEffectY; // 0 = move with cam || 1 = won't move || 0.5 = half
+        float movementY = cam.transform.position.y * (1 - parallaxEffectY);
+
+        transform.position = new Vector3(startPosX + distanceX, startPosY + distanceY, transform.position.z);
 
         // if background has reached the end of its length adjust its position for infinite scrolling
-        if (movement > startPos + length)
+        if (movementX > startPosX + lengthX)
         {
-            startPos += length;
+            startPosX += lengthX;
         }
-        else if (movement < startPos - length)
+        else if (movementX < startPosX - lengthX)
         {
-            startPos -= length;
+            startPosX -= lengthX;
         }
 
-        if (PlayerMovement.jumping)
+        // if background has reached the end of its length adjust its position for infinite scrolling
+        if (movementY > startPosY + lengthY)
         {
-            float verticalDistance = cam.transform.position.y * parallaxEffect;
-            transform.position = new Vector3(startPos + distance, transform.position.y + verticalDistance, transform.position.z);
+            startPosY += lengthY;
+        }
+        else if (movementY < startPosY - lengthY)
+        {
+            startPosY -= lengthY;
         }
     }
 }
