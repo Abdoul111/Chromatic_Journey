@@ -1356,7 +1356,7 @@ MonoBehaviour:
           m_StringArgument: close
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 897163687}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PopupText, Assembly-CSharp
         m_MethodName: ClosePopUp
         m_Mode: 1
@@ -2928,11 +2928,11 @@ Transform:
   m_GameObject: {fileID: 429529974}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -967.687, y: -539.9779, z: -1.1804935}
+  m_LocalPosition: {x: -23.960022, y: -36.46997, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1244683307}
+  m_Father: {fileID: 556293785}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &429529976
 MonoBehaviour:
@@ -3825,6 +3825,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 429529975}
   - {fileID: 1244683307}
   - {fileID: 587308365}
   m_Father: {fileID: 0}
@@ -4078,7 +4079,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 897163688}
   - {fileID: 1650549615}
   - {fileID: 833142758}
   - {fileID: 103376658}
@@ -5761,7 +5761,7 @@ Transform:
   m_GameObject: {fileID: 833142757}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -962.3779, y: -540.77203, z: -0.32079202}
+  m_LocalPosition: {x: -849.554, y: -493.231, z: -0.32079202}
   m_LocalScale: {x: 1.0884, y: 3.1305106, z: 1.0884}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5957,53 +5957,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!1 &897163686
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 897163688}
-  - component: {fileID: 897163687}
-  m_Layer: 0
-  m_Name: PopupManager
-  m_TagString: PopupManager
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &897163687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 897163686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96cfacfe57e99ef4b806b110ab1e5a33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  popUpBox: {fileID: 103376657}
-  animator: {fileID: 103376659}
-  popUpText: {fileID: 1034222580}
---- !u!4 &897163688
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 897163686}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -967.687, y: -539.9779, z: -1.1804935}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 587308365}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &907790637
 GameObject:
   m_ObjectHideFlags: 0
@@ -14057,7 +14010,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 429529975}
   - {fileID: 780917935}
   - {fileID: 2073942078}
   - {fileID: 1120649899}
@@ -15539,7 +15491,7 @@ Transform:
   m_GameObject: {fileID: 1650549614}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -962.428, y: -541.192, z: 1.7374517}
+  m_LocalPosition: {x: -849.60406, y: -493.65097, z: 1.7374517}
   m_LocalScale: {x: 0.49553454, y: 0.49553454, z: 0.49553454}
   m_ConstrainProportionsScale: 0
   m_Children: []
