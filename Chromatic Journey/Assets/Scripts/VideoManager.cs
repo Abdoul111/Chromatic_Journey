@@ -20,7 +20,7 @@ public class VideoManager : MonoBehaviour
             Debug.LogError("VideoPlayer not assigned!");
             return;
         }
-
+        MainMenuLevelController.SetCurrentLevel(1);
         int currentLevel = MainMenuLevelController.GetCurrentLevel();
         PlayVideoBasedOnCondition(currentLevel);
     }

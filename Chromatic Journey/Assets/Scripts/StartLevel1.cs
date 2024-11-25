@@ -20,7 +20,7 @@ public class StartLevel1 : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene("Level1");
+            SceneManager.LoadScene("Main Menu");
         }
     }
 }
