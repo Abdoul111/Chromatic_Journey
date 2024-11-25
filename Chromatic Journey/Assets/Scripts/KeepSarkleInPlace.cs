@@ -2,23 +2,28 @@ using UnityEngine;
 
 public class KeepInPlace : MonoBehaviour
 {
-    public Transform player; // Reference to the player object
-    public float parallaxFactor = 0.015f; // Adjust for how much movement to allow
+    public Transform sign; // Reference to the specific sign this particle system belongs to
 
-    private Vector3 initialPosition;
+    private Vector3 initialOffset; // Offset of the particle system relative to the sign
 
     void Start()
     {
-        // Store the initial position of the object
-        initialPosition = transform.position;
+        if (sign == null)
+        {
+            Debug.LogError("Sign reference is missing! Assign a sign in the inspector.");
+            return;
+        }
+
+        // Calculate the initial offset of the particle system relative to the sign
+        initialOffset = transform.position - sign.position;
     }
 
     void LateUpdate()
     {
-        if (player != null)
+        if (sign != null)
         {
-            // Adjust the object's position slightly relative to the player's movement
-            transform.position = initialPosition + (player.position * parallaxFactor);
+            // Keep the particle system anchored to the sign
+            transform.position = sign.position + initialOffset;
         }
     }
 }
