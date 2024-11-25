@@ -31,6 +31,7 @@ public class SignManager : MonoBehaviour
 
             //PopupText pop = GameObject.FindGameObjectWithTag("PopupManager").GetComponent<PopupText>();
             //pop.PopUp(popUpString);
+            Debug.Log("Collision detected with: " + other.gameObject.name);
             PopupText.Instance.PopUp(popUpString);
         }
     }
