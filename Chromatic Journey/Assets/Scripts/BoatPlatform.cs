@@ -21,11 +21,11 @@ public class BoatPlatform : MonoBehaviour
     private bool startMoving = false;
 
     private Vector3 direction;
-    private Vector3 previousPosition;
     private bool isMovingForward = true;
     private bool isFlipping = false;
     private float flipTimer = 0f;
-    private float initialScaleX;
+
+    public Transform boat;
 
     // Add these for visual debugging of detection radius
     private void OnDrawGizmosSelected()
@@ -42,8 +42,6 @@ public class BoatPlatform : MonoBehaviour
     private void Start()
     {
         direction = (endPoint.position - startPoint.position).normalized;
-        previousPosition = transform.position;
-        initialScaleX = transform.localScale.x;
     }
 
     private void FixedUpdate()
@@ -78,8 +76,6 @@ public class BoatPlatform : MonoBehaviour
             }
             StartFlip();
         }
-
-        previousPosition = transform.position;
     }
 
     // Rest of your original code remains the same...
@@ -100,22 +96,17 @@ public class BoatPlatform : MonoBehaviour
     private void HandleFlip()
     {
         flipTimer += Time.deltaTime;
-        float normalizedTime = flipTimer / flipDuration;
-        float smoothStepTime = normalizedTime * normalizedTime * (3f - 2f * normalizedTime);
-        float newScaleX = Mathf.Lerp(initialScaleX, -initialScaleX, smoothStepTime);
-        Vector3 newScale = transform.localScale;
-        newScale.x = newScaleX;
-        transform.localScale = newScale;
+        float normalizedTime = Mathf.Clamp01(flipTimer / flipDuration);
+        float rotationY = Mathf.LerpAngle(0f, 180f, normalizedTime); // Rotate only on Y-axis
 
-        if (flipTimer >= flipDuration)
+        boat.eulerAngles = new Vector3(0, rotationY, -4);
+
+        if (normalizedTime >= 1f)
         {
             isFlipping = false;
             isMovingForward = !isMovingForward;
-            newScale.x = isMovingForward ? initialScaleX : -initialScaleX;
-            transform.localScale = newScale;
+            boat.eulerAngles = new Vector3(0, isMovingForward ? 0 : 180, -4);
         }
-
-        previousPosition = transform.position;
     }
 
     public void TriggerMovement()
