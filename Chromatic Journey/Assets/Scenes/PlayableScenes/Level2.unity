@@ -3041,7 +3041,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: x0
+  m_Text: x0/
 --- !u!222 &367603365
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19879,7 +19879,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: fec81c62152967f448d0ea877eacad5e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -32346,6 +32346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinText: {fileID: 367603364}
+  totalCoins: 5
   pickupSound: {fileID: 8300000, guid: c32b98d4157df4445a34f5636cc101c4, type: 3}
   pickupParticle: {fileID: 2769581651194206047, guid: 65986ac29f2839642bd38cfa7b4c6369, type: 3}
 --- !u!82 &1928084845
