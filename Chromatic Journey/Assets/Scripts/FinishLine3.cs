@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class FinishLine : MonoBehaviour
+public class FinishLine3 : MonoBehaviour
 {
     public coinHandler coinHandler; // Reference to the coinHandler script
     public AudioClip missingCoinsSound; // Sound to play when coins are missing
@@ -23,7 +23,7 @@ public class FinishLine : MonoBehaviour
             // Check if all coins are collected
             if (coinHandler != null && coinHandler.AllCoinsCollected())
             {
-                SceneManager.LoadScene("Level2");
+                SceneManager.LoadScene("L3Success Cutscene");
             }
             else
             {

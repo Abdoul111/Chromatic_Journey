@@ -11879,6 +11879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinHandler: {fileID: 1928084844}
+  missingCoinsSound: {fileID: 8300000, guid: 85302d3c919075240990d423e10acd66, type: 3}
 --- !u!61 &1495471637
 BoxCollider2D:
   m_ObjectHideFlags: 0
