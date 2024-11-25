@@ -2,6 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class PopupText : MonoBehaviour
 {
@@ -79,6 +80,9 @@ public class PopupText : MonoBehaviour
 
             // Disable the button to prevent unintended clicks
             popupButton.interactable = false;
+
+            // Clear button hover or focus state
+            EventSystem.current.SetSelectedGameObject(null);
 
             isPopupActive = false;
         }
