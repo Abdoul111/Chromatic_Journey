@@ -892,7 +892,7 @@ GameObject:
   - component: {fileID: 88432501}
   - component: {fileID: 88432500}
   - component: {fileID: 88432499}
-  m_Layer: 4
+  m_Layer: 9
   m_Name: boulder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1103,7 +1103,7 @@ GameObject:
   - component: {fileID: 100640528}
   - component: {fileID: 100640527}
   - component: {fileID: 100640526}
-  m_Layer: 4
+  m_Layer: 9
   m_Name: boulder (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3066,7 +3066,7 @@ GameObject:
   - component: {fileID: 289163664}
   - component: {fileID: 289163663}
   - component: {fileID: 289163662}
-  m_Layer: 4
+  m_Layer: 9
   m_Name: boulder (32)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4673,7 +4673,7 @@ GameObject:
   - component: {fileID: 479072018}
   - component: {fileID: 479072017}
   - component: {fileID: 479072016}
-  m_Layer: 4
+  m_Layer: 9
   m_Name: boulder (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4848,7 +4848,7 @@ GameObject:
   - component: {fileID: 489004257}
   - component: {fileID: 489004256}
   - component: {fileID: 489004255}
-  m_Layer: 4
+  m_Layer: 9
   m_Name: boulder (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6178,7 +6178,7 @@ GameObject:
   - component: {fileID: 569364036}
   - component: {fileID: 569364035}
   - component: {fileID: 569364034}
-  m_Layer: 4
+  m_Layer: 9
   m_Name: boulder (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6353,7 +6353,7 @@ GameObject:
   - component: {fileID: 576747726}
   - component: {fileID: 576747725}
   - component: {fileID: 576747724}
-  m_Layer: 4
+  m_Layer: 9
   m_Name: boulder (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6834,7 +6834,7 @@ GameObject:
   - component: {fileID: 612162375}
   - component: {fileID: 612162374}
   - component: {fileID: 612162373}
-  m_Layer: 4
+  m_Layer: 9
   m_Name: boulder (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13758,7 +13758,7 @@ GameObject:
   - component: {fileID: 756651889}
   - component: {fileID: 756651888}
   - component: {fileID: 756651887}
-  m_Layer: 4
+  m_Layer: 9
   m_Name: boulder (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14139,7 +14139,7 @@ GameObject:
   - component: {fileID: 774183004}
   - component: {fileID: 774183003}
   - component: {fileID: 774183002}
-  m_Layer: 4
+  m_Layer: 9
   m_Name: boulder (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15948,7 +15948,7 @@ GameObject:
   - component: {fileID: 906028753}
   - component: {fileID: 906028752}
   - component: {fileID: 906028751}
-  m_Layer: 4
+  m_Layer: 9
   m_Name: boulder (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17249,7 +17249,7 @@ GameObject:
   - component: {fileID: 1015331699}
   - component: {fileID: 1015331698}
   - component: {fileID: 1015331697}
-  m_Layer: 4
+  m_Layer: 9
   m_Name: boulder (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23761,7 +23761,7 @@ GameObject:
   - component: {fileID: 1151648899}
   - component: {fileID: 1151648898}
   - component: {fileID: 1151648897}
-  m_Layer: 4
+  m_Layer: 9
   m_Name: boulder (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23946,7 +23946,7 @@ GameObject:
   - component: {fileID: 1171943537}
   - component: {fileID: 1171943536}
   - component: {fileID: 1171943535}
-  m_Layer: 4
+  m_Layer: 9
   m_Name: boulder (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25186,7 +25186,7 @@ GameObject:
   - component: {fileID: 1220882525}
   - component: {fileID: 1220882524}
   - component: {fileID: 1220882523}
-  m_Layer: 4
+  m_Layer: 9
   m_Name: boulder (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25579,7 +25579,7 @@ GameObject:
   - component: {fileID: 1254133809}
   - component: {fileID: 1254133808}
   - component: {fileID: 1254133807}
-  m_Layer: 4
+  m_Layer: 9
   m_Name: boulder (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26660,7 +26660,7 @@ GameObject:
   - component: {fileID: 1341924821}
   - component: {fileID: 1341924820}
   - component: {fileID: 1341924819}
-  m_Layer: 4
+  m_Layer: 9
   m_Name: boulder (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26835,7 +26835,7 @@ GameObject:
   - component: {fileID: 1352546321}
   - component: {fileID: 1352546320}
   - component: {fileID: 1352546319}
-  m_Layer: 4
+  m_Layer: 9
   m_Name: boulder (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27546,7 +27546,7 @@ GameObject:
   - component: {fileID: 1394563768}
   - component: {fileID: 1394563767}
   - component: {fileID: 1394563766}
-  m_Layer: 4
+  m_Layer: 9
   m_Name: boulder (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27954,7 +27954,7 @@ GameObject:
   - component: {fileID: 1434353499}
   - component: {fileID: 1434353498}
   - component: {fileID: 1434353497}
-  m_Layer: 4
+  m_Layer: 9
   m_Name: boulder (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33376,7 +33376,7 @@ GameObject:
   - component: {fileID: 1482569060}
   - component: {fileID: 1482569059}
   - component: {fileID: 1482569058}
-  m_Layer: 4
+  m_Layer: 9
   m_Name: boulder (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34310,7 +34310,7 @@ GameObject:
   - component: {fileID: 1524591697}
   - component: {fileID: 1524591696}
   - component: {fileID: 1524591695}
-  m_Layer: 4
+  m_Layer: 9
   m_Name: boulder (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34927,7 +34927,7 @@ GameObject:
   - component: {fileID: 1571179085}
   - component: {fileID: 1571179084}
   - component: {fileID: 1571179083}
-  m_Layer: 4
+  m_Layer: 9
   m_Name: boulder (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35652,7 +35652,7 @@ GameObject:
   - component: {fileID: 1613132050}
   - component: {fileID: 1613132049}
   - component: {fileID: 1613132048}
-  m_Layer: 4
+  m_Layer: 9
   m_Name: boulder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36042,7 +36042,7 @@ GameObject:
   - component: {fileID: 1652985727}
   - component: {fileID: 1652985726}
   - component: {fileID: 1652985725}
-  m_Layer: 4
+  m_Layer: 9
   m_Name: boulder (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36259,7 +36259,7 @@ GameObject:
   - component: {fileID: 1690105357}
   - component: {fileID: 1690105356}
   - component: {fileID: 1690105355}
-  m_Layer: 4
+  m_Layer: 9
   m_Name: boulder (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37361,7 +37361,7 @@ GameObject:
   - component: {fileID: 1767477260}
   - component: {fileID: 1767477259}
   - component: {fileID: 1767477258}
-  m_Layer: 4
+  m_Layer: 9
   m_Name: boulder (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37773,7 +37773,7 @@ GameObject:
   - component: {fileID: 1774367623}
   - component: {fileID: 1774367622}
   - component: {fileID: 1774367621}
-  m_Layer: 4
+  m_Layer: 9
   m_Name: boulder (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38864,7 +38864,7 @@ GameObject:
   - component: {fileID: 1833433501}
   - component: {fileID: 1833433500}
   - component: {fileID: 1833433499}
-  m_Layer: 4
+  m_Layer: 9
   m_Name: boulder (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39039,7 +39039,7 @@ GameObject:
   - component: {fileID: 1837267173}
   - component: {fileID: 1837267172}
   - component: {fileID: 1837267171}
-  m_Layer: 4
+  m_Layer: 9
   m_Name: boulder (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39214,7 +39214,7 @@ GameObject:
   - component: {fileID: 1868589693}
   - component: {fileID: 1868589692}
   - component: {fileID: 1868589691}
-  m_Layer: 4
+  m_Layer: 9
   m_Name: boulder (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39632,7 +39632,7 @@ MonoBehaviour:
   rb: {fileID: 1928084838}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 80
+    m_Bits: 592
   groundCheck: {fileID: 17659980}
   footstepCooldown: 0.5
   footstepAudioSound: {fileID: 8300000, guid: b895cc79f716256408dda73d8846b47e, type: 3}
@@ -40912,7 +40912,7 @@ GameObject:
   - component: {fileID: 1954642857}
   - component: {fileID: 1954642856}
   - component: {fileID: 1954642855}
-  m_Layer: 4
+  m_Layer: 9
   m_Name: boulder (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42431,7 +42431,7 @@ GameObject:
   - component: {fileID: 2066888934}
   - component: {fileID: 2066888933}
   - component: {fileID: 2066888932}
-  m_Layer: 4
+  m_Layer: 9
   m_Name: boulder (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
