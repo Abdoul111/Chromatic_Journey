@@ -34,6 +34,8 @@ public class IntroPlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         isRunningHash = Animator.StringToHash("isRunning");
         isJumpingHash = Animator.StringToHash("isJumping");
+
+        MainMenuLevelController.SetCurrentLevel(1);
     }
 
     // Update is called once per frame
