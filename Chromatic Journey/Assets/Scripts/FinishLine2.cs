@@ -24,6 +24,7 @@ public class FinishLine2 : MonoBehaviour
             if (coinHandler != null && coinHandler.AllCoinsCollected())
             {
                 SceneManager.LoadScene("Win Level 2 Cutscene");
+                MainMenuLevelController.SetCurrentLevel(3);
             }
             else
             {
