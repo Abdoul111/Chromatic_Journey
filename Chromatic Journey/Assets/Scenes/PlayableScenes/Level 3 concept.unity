@@ -3302,7 +3302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0.99215686, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3397,7 +3397,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: x0
+  m_Text: x0/
 --- !u!222 &367603365
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -39954,6 +39954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinText: {fileID: 367603364}
+  totalCoins: 4
   pickupSound: {fileID: 8300000, guid: c32b98d4157df4445a34f5636cc101c4, type: 3}
   pickupParticle: {fileID: 94630844211298874, guid: 9020187f5e7b55941a6f30981edcc772, type: 3}
 --- !u!82 &1928084845

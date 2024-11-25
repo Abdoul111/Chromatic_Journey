@@ -5,22 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class FinishLine2 : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public coinHandler coinHandler; // Reference to the coinHandler script
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        
-    }
-
-    private void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene("L2Success Cutscene");
+            // Check if all coins are collected
+            if (coinHandler != null && coinHandler.AllCoinsCollected())
+            {
+                SceneManager.LoadScene("L2Success Cutscene");
+            }
+            else
+            {
+                Debug.Log("Not all coins collected!");
+            }
         }
     }
 }
