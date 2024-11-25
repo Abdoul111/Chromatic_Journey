@@ -22535,7 +22535,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinText: {fileID: 367603364}
-  pickupSound: {fileID: 8300000, guid: ffaf5177d83dd864d93b84c6a3ca6955, type: 3}
+  pickupSound: {fileID: 8300000, guid: c32b98d4157df4445a34f5636cc101c4, type: 3}
   pickupParticle: {fileID: 4610292090895475557, guid: 6cee24fc7db573b459f67f531dac50f3, type: 3}
 --- !u!82 &1928084845
 AudioSource:
@@ -22547,7 +22547,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: d2a66e87b97a3d64f84943137452c0b1, type: 2}
-  m_audioClip: {fileID: 8300000, guid: ffaf5177d83dd864d93b84c6a3ca6955, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c32b98d4157df4445a34f5636cc101c4, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
