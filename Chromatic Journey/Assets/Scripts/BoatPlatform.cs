@@ -119,6 +119,7 @@ public class BoatPlatform : MonoBehaviour
         {
             transform.position = endPoint.position;
             StartFlip();
+            return; // Add this line to stop movement
         }
         else if (Vector3.Distance(transform.position, startPoint.position) < endpointDetectionRadius && !isMovingForward)
         {
@@ -130,6 +131,7 @@ public class BoatPlatform : MonoBehaviour
                 return;
             }
             StartFlip();
+            return; // Add this line to stop movement
         }
     }
 
