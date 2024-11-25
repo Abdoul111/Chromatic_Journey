@@ -8060,7 +8060,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bcf51e4828fa94b88e16722fb787bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sign: {fileID: 0}
+  sign: {fileID: 1244683307}
 --- !u!1 &818300463
 GameObject:
   m_ObjectHideFlags: 0
@@ -9570,7 +9570,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzlePanel: {fileID: 22530846}
+  goalWordLabel: {fileID: 0}
   currentWordLabel: {fileID: 587086907}
+  targetSequence: Travel Slowly
+  displaySequence: ____
 --- !u!61 &944480998
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10126,7 +10129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bcf51e4828fa94b88e16722fb787bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sign: {fileID: 0}
+  sign: {fileID: 1939294722}
 --- !u!1001 &1023161213
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20348,7 +20351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bcf51e4828fa94b88e16722fb787bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sign: {fileID: 0}
+  sign: {fileID: 587308365}
 --- !u!1 &1686541386
 GameObject:
   m_ObjectHideFlags: 0
