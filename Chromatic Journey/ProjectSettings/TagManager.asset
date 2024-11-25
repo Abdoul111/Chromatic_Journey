@@ -10,6 +10,7 @@ TagManager:
   - Sloped
   - PopupManager
   - MovingBoat
+  - MovingLever
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - Ground
   - Background
   - Outline
-  - 
+  - Boulder
   - 
   - 
   - 
