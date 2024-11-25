@@ -6208,7 +6208,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!1 &592609660
 GameObject:
@@ -16979,7 +16979,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
-
 --- !u!1 &1121016122
 GameObject:
   m_ObjectHideFlags: 0
@@ -17064,6 +17063,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1124190788
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6848388541636559593, guid: f80cf915fe8102e4f85ddc219c73920f, type: 3}
+      propertyPath: m_Name
+      value: GreenOilCoinGood (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7771546014064882434, guid: f80cf915fe8102e4f85ddc219c73920f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 40.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 7771546014064882434, guid: f80cf915fe8102e4f85ddc219c73920f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 15.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 7771546014064882434, guid: f80cf915fe8102e4f85ddc219c73920f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7771546014064882434, guid: f80cf915fe8102e4f85ddc219c73920f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7771546014064882434, guid: f80cf915fe8102e4f85ddc219c73920f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7771546014064882434, guid: f80cf915fe8102e4f85ddc219c73920f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7771546014064882434, guid: f80cf915fe8102e4f85ddc219c73920f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7771546014064882434, guid: f80cf915fe8102e4f85ddc219c73920f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7771546014064882434, guid: f80cf915fe8102e4f85ddc219c73920f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7771546014064882434, guid: f80cf915fe8102e4f85ddc219c73920f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f80cf915fe8102e4f85ddc219c73920f, type: 3}
 --- !u!1 &1168632180
 GameObject:
   m_ObjectHideFlags: 0
@@ -17277,63 +17333,6 @@ SpriteShapeRenderer:
     m_Center: {x: -4.5731554, y: -0.318089, z: 0}
     m_Extent: {x: 1.8561699, y: 1.2891439, z: 0}
   m_SpriteSortPoint: 0
---- !u!1001 &1124190788
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6848388541636559593, guid: f80cf915fe8102e4f85ddc219c73920f, type: 3}
-      propertyPath: m_Name
-      value: GreenOilCoinGood (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7771546014064882434, guid: f80cf915fe8102e4f85ddc219c73920f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 40.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 7771546014064882434, guid: f80cf915fe8102e4f85ddc219c73920f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 15.74
-      objectReference: {fileID: 0}
-    - target: {fileID: 7771546014064882434, guid: f80cf915fe8102e4f85ddc219c73920f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7771546014064882434, guid: f80cf915fe8102e4f85ddc219c73920f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7771546014064882434, guid: f80cf915fe8102e4f85ddc219c73920f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7771546014064882434, guid: f80cf915fe8102e4f85ddc219c73920f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7771546014064882434, guid: f80cf915fe8102e4f85ddc219c73920f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7771546014064882434, guid: f80cf915fe8102e4f85ddc219c73920f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7771546014064882434, guid: f80cf915fe8102e4f85ddc219c73920f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7771546014064882434, guid: f80cf915fe8102e4f85ddc219c73920f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f80cf915fe8102e4f85ddc219c73920f, type: 3}
 --- !u!1 &1189919543
 GameObject:
   m_ObjectHideFlags: 0
@@ -18495,7 +18494,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!1 &1247278054 stripped
 GameObject:
@@ -33232,7 +33231,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!1001 &1950052869
 PrefabInstance:
@@ -35330,10 +35329,6 @@ SceneRoots:
   - {fileID: 240792355}
   - {fileID: 2145022441}
   - {fileID: 1532468784}
-  - {fileID: 2208746757819202585}
-  - {fileID: 396313700}
-  - {fileID: 628694375}
-  - {fileID: 1452084909}
   - {fileID: 302497988}
   - {fileID: 1848503567}
   - {fileID: 561317602}
