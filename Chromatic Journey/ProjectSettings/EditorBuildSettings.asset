@@ -27,6 +27,6 @@ EditorBuildSettings:
     path: Assets/Scenes/PlayableScenes/Level1.unity
     guid: ba37b7c503b4b1440bdb35ac5645a27d
   - enabled: 1
-    path: Assets/Scenes/CutScenes/L2Success Cutscene.unity
+    path: Assets/Scenes/CutScenes/Win Level 2 Cutscene.unity
     guid: 82cefa77f58aaba40930ea465d9f0efe
   m_configObjects: {}

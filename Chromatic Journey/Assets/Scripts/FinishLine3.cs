@@ -23,7 +23,7 @@ public class FinishLine3 : MonoBehaviour
             // Check if all coins are collected
             if (coinHandler != null && coinHandler.AllCoinsCollected())
             {
-                SceneManager.LoadScene("L3Success Cutscene");
+                SceneManager.LoadScene("Win Level 3 Cutscene");
             }
             else
             {
