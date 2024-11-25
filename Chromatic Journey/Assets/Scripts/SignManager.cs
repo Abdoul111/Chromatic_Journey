@@ -6,7 +6,7 @@ public class SignManager : MonoBehaviour
     [SerializeField] public string popUpString;
     [SerializeField] private AudioClip audioPopup1;
     private AudioSource audioSource;
-    private bool hasInteracted = false;
+    private bool isPopupActive = false;
 
     private void Start()
     {
@@ -17,31 +17,50 @@ public class SignManager : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player") && !hasInteracted)
+        if (other.CompareTag("Player") && !isPopupActive)
         {
-            hasInteracted = true;
+            // Stop any ongoing coroutine in case of re-triggering
+            StopAllCoroutines();
+
+            isPopupActive = true;
 
             // Register this sign with PopupText
             PopupText.Instance.RegisterSignManager(this);
+
+            // Reset popup box to ensure it's visible
+            PopupText.Instance.popUpBox.SetActive(true);
 
             if (audioPopup1 != null && !audioSource.isPlaying)
             {
                 audioSource.PlayOneShot(audioPopup1);
             }
 
-            Debug.Log("Collision detected with: " + other.gameObject.name);
+            Debug.Log("Trigger detected with: " + other.gameObject.name);
             PopupText.Instance.PopUp(popUpString);
 
+            // Start the popup handling coroutine
             StartCoroutine(HandlePopupAfterAudio());
         }
     }
 
     private IEnumerator HandlePopupAfterAudio()
     {
+        // Wait for the audio to finish
         yield return new WaitForSeconds(audioPopup1.length);
-        StartCoroutine(PopupText.Instance.FadeOutAfterDelay(0f, 3f));
+
+        // Start fading out the popup text
+        yield return PopupText.Instance.FadeOutAfterDelay(0f, 3f);
+
+        // Allow the sign to be triggered again
+        ResetPopup();
+    }
+
+    public void ResetPopup()
+    {
+        isPopupActive = false;
+        StopAllCoroutines(); // Stop any ongoing coroutines
     }
 
     public void StopAudio()
