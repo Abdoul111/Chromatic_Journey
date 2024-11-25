@@ -850,7 +850,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ae8b9e12a74e9a14686b66a8a8f13691, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a9eb495804524d5478d278edc3e4fa14, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.75
   m_Pitch: 1
@@ -4203,6 +4203,7 @@ MonoBehaviour:
   footstepCooldown: 0.5
   footstepAudioSound: {fileID: 0}
   landingAudioSound: {fileID: 0}
+  jumpAudioSound: {fileID: 0}
   isBusy: 0
 --- !u!50 &1928084838
 Rigidbody2D:
