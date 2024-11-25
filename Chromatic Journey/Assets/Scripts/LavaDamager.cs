@@ -36,11 +36,11 @@ public class LavaDamage2D : MonoBehaviour
         float lavaWidth = collider.bounds.size.x;
 
         // Position at the top of the lava
-        activeParticles.transform.localPosition = new Vector3(0f, lavaHeight / 3 , 0f);
+        activeParticles.transform.localPosition = new Vector3(0f, lavaHeight/9, 0f);
         activeParticles.transform.localRotation = Quaternion.identity;
 
         // Scale width based on lava width, but keep the specific height scale
-        activeParticles.transform.localScale = new Vector3(0.25f * lavaWidth, 0.25f, 2f);
+        activeParticles.transform.localScale = new Vector3(1f, 0.25f, 2f);
 
         // Configure particle system
         var main = activeParticles.main;
