@@ -6,6 +6,7 @@ using TMPro;
 public class Key_Sequence_Puzzle : MonoBehaviour
 {
     public GameObject puzzlePanel;
+    public TextMeshProUGUI goalWordLabel;
     public TextMeshProUGUI currentWordLabel;
 
     float currentTimeWait = 0f;
@@ -14,7 +15,8 @@ public class Key_Sequence_Puzzle : MonoBehaviour
 
     private MovingPlatform movingPlatform;
 
-    private string targetSequence = "Travel Slowly";
+    public string targetSequence = "Travel Slowly";
+    public string displaySequence = "____"; // used when the puzzle has missing character that the player must know
     private string currentInput = "";
     private bool puzzleAlreadySolved = false;
 
@@ -25,6 +27,7 @@ public class Key_Sequence_Puzzle : MonoBehaviour
         // Get the MovingPlatform component from the parent
         movingPlatform = GetComponentInParent<MovingPlatform>();
         targetSequence = targetSequence.ToUpper();
+        goalWordLabel.text = displaySequence;
     }
 
 
