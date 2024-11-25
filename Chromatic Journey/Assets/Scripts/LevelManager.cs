@@ -18,6 +18,6 @@ public class LevelManager : MonoBehaviour
     // Loads Level 3
     public void LoadLevel3()
     {
-        SceneManager.LoadScene("Level3");
+        SceneManager.LoadScene("Level 3 concept");
     }
 }
