@@ -15,7 +15,6 @@ public class SignManager : MonoBehaviour
         {
             audioSource = gameObject.AddComponent<AudioSource>();
         }
-        PopupText.Instance.RegisterSignManager(this);
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -23,6 +22,9 @@ public class SignManager : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && !hasInteracted)
         {
             hasInteracted = true;
+
+            // Register this sign with PopupText
+            PopupText.Instance.RegisterSignManager(this);
 
             if (audioPopup1 != null && !audioSource.isPlaying)
             {
@@ -46,6 +48,7 @@ public class SignManager : MonoBehaviour
     {
         if (audioSource.isPlaying)
         {
+            Debug.Log("Stopping audio for sign: " + gameObject.name);
             audioSource.Stop();
         }
     }

@@ -38,6 +38,13 @@ public class PopupText : MonoBehaviour
 
     public void RegisterSignManager(SignManager signManager)
     {
+        // Stop audio from the previously registered sign
+        if (currentSignManager != null && currentSignManager != signManager)
+        {
+            currentSignManager.StopAudio();
+        }
+
+        // Update the currentSignManager
         currentSignManager = signManager;
     }
 
