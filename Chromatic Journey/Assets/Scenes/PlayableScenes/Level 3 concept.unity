@@ -4280,7 +4280,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7965112091365634598, guid: f3d0e0f0ae7b3e64789da0b0c3fea678, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: MovingLever
       objectReference: {fileID: 0}
     - target: {fileID: 8642553000755880615, guid: f3d0e0f0ae7b3e64789da0b0c3fea678, type: 3}
       propertyPath: speed
@@ -5074,7 +5074,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -5105,7 +5105,7 @@ MonoBehaviour:
   leverToTrigger: {fileID: 1820001791}
   buttonSequenceNumber: 6
   pressedDistance: 0.5
-  moveHorizontally: 0
+  moveHorizontally: 1
   customFont: {fileID: 11400000, guid: c8b927a3794a7f64595c5d321f93e01e, type: 2}
   textColor: {r: 1, g: 1, b: 1, a: 1}
   textYOffset: 1
@@ -13667,7 +13667,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7965112091365634598, guid: f3d0e0f0ae7b3e64789da0b0c3fea678, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: MovingLever
       objectReference: {fileID: 0}
     - target: {fileID: 8642553000755880615, guid: f3d0e0f0ae7b3e64789da0b0c3fea678, type: 3}
       propertyPath: speed
@@ -15475,7 +15475,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7965112091365634598, guid: f3d0e0f0ae7b3e64789da0b0c3fea678, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: MovingLever
       objectReference: {fileID: 0}
     - target: {fileID: 8642553000755880615, guid: f3d0e0f0ae7b3e64789da0b0c3fea678, type: 3}
       propertyPath: speed
@@ -15796,7 +15796,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -15827,7 +15827,7 @@ MonoBehaviour:
   leverToTrigger: {fileID: 428615836}
   buttonSequenceNumber: 3
   pressedDistance: 0.5
-  moveHorizontally: 0
+  moveHorizontally: 1
   customFont: {fileID: 11400000, guid: c8b927a3794a7f64595c5d321f93e01e, type: 2}
   textColor: {r: 1, g: 1, b: 1, a: 1}
   textYOffset: 1
@@ -25813,7 +25813,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -25844,7 +25844,7 @@ MonoBehaviour:
   leverToTrigger: {fileID: 1491196491}
   buttonSequenceNumber: 2
   pressedDistance: 0.5
-  moveHorizontally: 0
+  moveHorizontally: 1
   customFont: {fileID: 11400000, guid: c8b927a3794a7f64595c5d321f93e01e, type: 2}
   textColor: {r: 1, g: 1, b: 1, a: 1}
   textYOffset: 1
@@ -33026,7 +33026,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -33057,7 +33057,7 @@ MonoBehaviour:
   leverToTrigger: {fileID: 854592912}
   buttonSequenceNumber: 4
   pressedDistance: 0.5
-  moveHorizontally: 0
+  moveHorizontally: 1
   customFont: {fileID: 11400000, guid: c8b927a3794a7f64595c5d321f93e01e, type: 2}
   textColor: {r: 1, g: 1, b: 1, a: 1}
   textYOffset: 1
@@ -33142,7 +33142,7 @@ GameObject:
   - component: {fileID: 1472816677}
   - component: {fileID: 1472816676}
   m_Layer: 0
-  m_Name: button
+  m_Name: button 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33177,7 +33177,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -33208,7 +33208,7 @@ MonoBehaviour:
   leverToTrigger: {fileID: 1950633768}
   buttonSequenceNumber: 1
   pressedDistance: -0.5
-  moveHorizontally: 0
+  moveHorizontally: 1
   customFont: {fileID: 11400000, guid: c8b927a3794a7f64595c5d321f93e01e, type: 2}
   textColor: {r: 1, g: 1, b: 1, a: 1}
   textYOffset: 1
@@ -33608,7 +33608,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -33639,7 +33639,7 @@ MonoBehaviour:
   leverToTrigger: {fileID: 749032673}
   buttonSequenceNumber: 5
   pressedDistance: -0.5
-  moveHorizontally: 0
+  moveHorizontally: 1
   customFont: {fileID: 11400000, guid: c8b927a3794a7f64595c5d321f93e01e, type: 2}
   textColor: {r: 1, g: 1, b: 1, a: 1}
   textYOffset: 1
@@ -35508,7 +35508,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7965112091365634598, guid: f3d0e0f0ae7b3e64789da0b0c3fea678, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: MovingLever
       objectReference: {fileID: 0}
     - target: {fileID: 8642553000755880615, guid: f3d0e0f0ae7b3e64789da0b0c3fea678, type: 3}
       propertyPath: speed
@@ -38560,7 +38560,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7965112091365634598, guid: f3d0e0f0ae7b3e64789da0b0c3fea678, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: MovingLever
       objectReference: {fileID: 0}
     - target: {fileID: 8642553000755880615, guid: f3d0e0f0ae7b3e64789da0b0c3fea678, type: 3}
       propertyPath: speed
@@ -40821,7 +40821,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7965112091365634598, guid: f3d0e0f0ae7b3e64789da0b0c3fea678, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: MovingLever
       objectReference: {fileID: 0}
     - target: {fileID: 8642553000755880615, guid: f3d0e0f0ae7b3e64789da0b0c3fea678, type: 3}
       propertyPath: speed
@@ -42679,7 +42679,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2145022440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42694,9 +42694,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectPrefabs:
   - {fileID: 3770114259108019937, guid: a4369150261c8574f89fe4d19c74d1b0, type: 3}
-  spawnAreaSize: {x: 8, y: 1}
-  objectCount: 1000
-  spawnDensity: 1
+  spawnAreaSize: {x: 50, y: 1}
+  objectCount: 2500
+  spawnDensity: 0.22
   spawnAreaCenter: {fileID: 2145022441}
   enableTrail: 1
   trailTime: 0.5
@@ -42716,7 +42716,7 @@ Transform:
   m_GameObject: {fileID: 2145022439}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25.331852, y: 27.94806, z: 0.32489538}
+  m_LocalPosition: {x: 38.41, y: 48.34, z: 0.32489538}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
