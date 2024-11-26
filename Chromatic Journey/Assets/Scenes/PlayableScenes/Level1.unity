@@ -2642,8 +2642,8 @@ Transform:
   m_GameObject: {fileID: 273960893}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.043791164, y: 1.4882183, z: 0}
-  m_LocalScale: {x: 0.45876345, y: 2.0669699, z: 1}
+  m_LocalPosition: {x: 0.1795, y: 1.4882183, z: 0}
+  m_LocalScale: {x: 0.1709303, y: 2.0669699, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1135349174}
@@ -6852,9 +6852,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d00570eccd17c9c41a55d18b663dd961, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  popUpString: The end is at right, in your way, you will encounter a key-sequence
-    puzzle. "Lava" is your missing word.
-  audioPopup1: {fileID: 8300000, guid: cf46776e92abd8e4f9880c7f63e264f5, type: 3}
+  popUpString: I flow but I'm not water, I'm hot but I'm not fire. I shape the land
+    as I move, From the earth's core, I aspire. What am I?
+  audioPopup1: {fileID: 8300000, guid: 800f5b113111d244ebe7d62f2345d1e1, type: 3}
 --- !u!61 &666450731
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14941,7 +14941,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popUpString: Take a deep breath... and jump! It's safe, I promise. <3
-  audioPopup1: {fileID: 8300000, guid: 138e09b6aa5f03947ae02579604b0021, type: 3}
+  audioPopup1: {fileID: 8300000, guid: 8c9273cbeec38854b922670434504ce2, type: 3}
 --- !u!61 &1177389452
 BoxCollider2D:
   m_ObjectHideFlags: 0
