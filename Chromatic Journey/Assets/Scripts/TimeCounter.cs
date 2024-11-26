@@ -1,10 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class TimeCounter : MonoBehaviour
 {
     public Text timerText;
+    public TextMeshProUGUI finalTimerText;
     private float timeElapsed = 0f;
     private bool isTiming = false;
     private static TimeCounter instance;
@@ -51,23 +53,38 @@ public class TimeCounter : MonoBehaviour
         }
     }
 
+    private void UpdateFinalTimerText()
+    {
+        int minutes = Mathf.FloorToInt(timeElapsed / 60f);
+        int seconds = Mathf.FloorToInt(timeElapsed % 60f);
+
+        if (finalTimerText != null)
+        {
+            finalTimerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        }
+    }
+
     public void StopTimer()
     {
+        Debug.Log("StopTimer");
         isTiming = false;
     }
 
     public void StartTimer()
     {
+        Debug.Log("StartTimer");
         isTiming = true;
     }
 
     public float GetTimeElapsed()
     {
+        Debug.Log(timeElapsed);
         return timeElapsed;
     }
 
     public void ResetTimer()
     {
+        Debug.Log("ResetTimer");
         timeElapsed = 0f;
         UpdateTimerText();
     }
@@ -84,21 +101,42 @@ public class TimeCounter : MonoBehaviour
             }
         }
 
-        // When in FinalScene, the timer stops to get points
-        if (scene.name == "FinalScene")
+        // Handle the final timer text in the Finish scene
+        if (scene.name == "Finish")
         {
             StopTimer();
-            Debug.Log("Final time: " + GetTimeElapsed() + " seconds");
+
+            // Find the finalTimerText in the new scene
+            GameObject finalTimeTextObject = GameObject.Find("FinalTimeText");
+            if (finalTimeTextObject != null)
+            {
+                finalTimerText = finalTimeTextObject.GetComponent<TextMeshProUGUI>();
+            }
+
+            // Update the final timer text
+            UpdateFinalTimerText();
+            MainMenuLevelController.SetCurrentLevel(1);
         }
 
         // Reset timer if the player goes to the Main Menu
         if (scene.name == "Main Menu")
         {
-            ResetTimer();
+            StopTimer();
         }
 
         // Start the timer when entering Level1
         if (scene.name == "Level1")
+        {
+            ResetTimer();
+            StartTimer();
+        }
+
+        if (scene.name == "Level2")
+        {
+            StartTimer();
+        }
+
+        if (scene.name == "Level 3 concept")
         {
             StartTimer();
         }

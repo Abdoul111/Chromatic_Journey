@@ -7575,7 +7575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d00570eccd17c9c41a55d18b663dd961, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  popUpString: Choose Wisely... Chroma. Which will it be,  1... 2... or 3?
+  popUpString: Pick Wisely... Chroma. Which will it be,  1... 2... or 3?
   audioPopup1: {fileID: 8300000, guid: 3f321b2e20ae5924e9decbc450531331, type: 3}
 --- !u!61 &699509776
 BoxCollider2D:
