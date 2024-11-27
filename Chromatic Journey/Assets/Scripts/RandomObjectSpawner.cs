@@ -4,7 +4,8 @@ using UnityEngine;
 public class RandomObjectSpawner : MonoBehaviour
 {
     [Header("Spawner Settings")]
-    public GameObject[] objectPrefabs;
+    public GameObject[] objectPrefabs; // Pool of objects for random spawning
+    public GameObject fallingObjectPrefab; // Specific prefab for "FallingObject"
     public Vector2 spawnAreaSize = new Vector2(10f, 5f);
     public int objectCount = 20;
     public float spawnDensity = 1f;
@@ -41,7 +42,11 @@ public class RandomObjectSpawner : MonoBehaviour
 
     private void SpawnRandomObject()
     {
-        GameObject prefab = objectPrefabs[Random.Range(0, objectPrefabs.Length)];
+        // Check if a specific FallingObject prefab should be used
+        GameObject prefabToSpawn = fallingObjectPrefab != null 
+            ? fallingObjectPrefab 
+            : objectPrefabs[Random.Range(0, objectPrefabs.Length)];
+
         Vector2 randomPosition = new Vector2(
             Random.Range(-spawnAreaSize.x / 2, spawnAreaSize.x / 2),
             Random.Range(-spawnAreaSize.y / 2, spawnAreaSize.y / 2)
@@ -49,7 +54,7 @@ public class RandomObjectSpawner : MonoBehaviour
         Vector2 spawnPosition = (Vector2)spawnAreaCenter.position + randomPosition;
 
         // Spawn the object
-        GameObject spawnedObject = Instantiate(prefab, spawnPosition, Quaternion.identity);
+        GameObject spawnedObject = Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity);
 
         // Add trail renderer if enabled
         if (enableTrail)

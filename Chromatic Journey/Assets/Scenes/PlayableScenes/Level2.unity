@@ -2248,19 +2248,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectPrefabs:
   - {fileID: 3770114259108019937, guid: a4369150261c8574f89fe4d19c74d1b0, type: 3}
+  fallingObjectPrefab: {fileID: 3770114259108019937, guid: 061f3ebd1d6680f46b40348e02184ee9, type: 3}
   spawnAreaSize: {x: 8, y: 1}
   objectCount: 1000
   spawnDensity: 1
   spawnAreaCenter: {fileID: 240792355}
   enableTrail: 1
   trailTime: 0.5
-  trailMaterial: {fileID: -876546973899608171, guid: ed1ef7fff69054d4eb61099a0b168800, type: 3}
-  trailStartColor: {r: 1, g: 0.8705883, b: 0, a: 1}
-  trailEndColor: {r: 1, g: 0.8714467, b: 0, a: 0}
+  trailMaterial: {fileID: 2100000, guid: 60091ba62ecadd34191d8fd697ca6712, type: 2}
+  trailStartColor: {r: 0.039649326, g: 0.9339623, b: 0.041638248, a: 1}
+  trailEndColor: {r: 0.2731399, g: 0.5849056, b: 0.29023492, a: 1}
   trailStartWidth: 0.5
   trailEndWidth: 0
   enableParticles: 1
-  particlePrefab: {fileID: 4633592901116115186, guid: 62c43cde6bc317049b7e083f43a4668e, type: 3}
+  particlePrefab: {fileID: 4633592901116115186, guid: 3dffeadb09cbaa04f88d40cd7fcd89f0, type: 3}
 --- !u!4 &240792355
 Transform:
   m_ObjectHideFlags: 0
@@ -3842,7 +3843,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damagePerSecond: 10
-  lavaParticlesPrefab: {fileID: 4633592901116115186, guid: b446539895d0d5d4d8d75da31c4e67fa, type: 3}
+  lavaParticlesPrefab: {fileID: 4633592901116115186, guid: 93d66d9a3958bba46854e3fd5c5d60bf, type: 3}
   particleDensity: 10
   particleLifetime: 2
 --- !u!61 &426872644
@@ -3910,7 +3911,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e20000ace9b6b9e439e2e91c917b013a, type: 2}
+  - {fileID: 2100000, guid: ed3dc7540941d3c40b14f434d76a0c49, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6645,7 +6646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damagePerSecond: 10
-  lavaParticlesPrefab: {fileID: 4633592901116115186, guid: b446539895d0d5d4d8d75da31c4e67fa, type: 3}
+  lavaParticlesPrefab: {fileID: 4633592901116115186, guid: 93d66d9a3958bba46854e3fd5c5d60bf, type: 3}
   particleDensity: 10
   particleLifetime: 2
 --- !u!61 &618615219
@@ -6713,7 +6714,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e20000ace9b6b9e439e2e91c917b013a, type: 2}
+  - {fileID: 2100000, guid: ed3dc7540941d3c40b14f434d76a0c49, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35194,19 +35195,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectPrefabs:
   - {fileID: 3770114259108019937, guid: a4369150261c8574f89fe4d19c74d1b0, type: 3}
+  fallingObjectPrefab: {fileID: 3770114259108019937, guid: 061f3ebd1d6680f46b40348e02184ee9, type: 3}
   spawnAreaSize: {x: 8, y: 1}
   objectCount: 1000
   spawnDensity: 1
   spawnAreaCenter: {fileID: 2145022441}
   enableTrail: 1
   trailTime: 0.5
-  trailMaterial: {fileID: -876546973899608171, guid: ed1ef7fff69054d4eb61099a0b168800, type: 3}
-  trailStartColor: {r: 1, g: 0.91820973, b: 0, a: 1}
-  trailEndColor: {r: 1, g: 0.9176471, b: 0, a: 0}
+  trailMaterial: {fileID: 2100000, guid: 60091ba62ecadd34191d8fd697ca6712, type: 2}
+  trailStartColor: {r: 0.039649326, g: 0.9339623, b: 0.041638248, a: 1}
+  trailEndColor: {r: 0.2731399, g: 0.5849056, b: 0.29023492, a: 1}
   trailStartWidth: 0.5
   trailEndWidth: 0
   enableParticles: 1
-  particlePrefab: {fileID: 4633592901116115186, guid: 62c43cde6bc317049b7e083f43a4668e, type: 3}
+  particlePrefab: {fileID: 4633592901116115186, guid: 3dffeadb09cbaa04f88d40cd7fcd89f0, type: 3}
 --- !u!4 &2145022441
 Transform:
   m_ObjectHideFlags: 0
