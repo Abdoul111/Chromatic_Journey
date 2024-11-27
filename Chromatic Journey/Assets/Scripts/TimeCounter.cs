@@ -131,7 +131,6 @@ public class TimeCounter : MonoBehaviour
             UpdateFinalTimerText();
             return; // No further logic for the "Finish" scene
         }
-
         // Link timerText in the new scene
         GameObject timeTextObject = GameObject.Find("TimeText");
         if (timeTextObject != null)
@@ -149,21 +148,23 @@ public class TimeCounter : MonoBehaviour
             }
             StartTimer();
         }
-        else if (sceneName == "Level2" || sceneName == "Level 3 concept")
+        else if (sceneName == "Level2")
         {
-            if (levelStartTimes.ContainsKey(sceneName))
+            if (!levelStartTimes.ContainsKey(sceneName))
             {
-                // If the timer for this level already exists, it means the player restarted the level.
-                Debug.Log($"Level {sceneName} restarted. Timer continues from {timeElapsed}s.");
-            }
-            else
-            {
-                // First time entering this level: set start time to the current timeElapsed
+                // Level 2's start time is Level 1's end time
                 levelStartTimes[sceneName] = timeElapsed;
-                Debug.Log($"Start time for {sceneName} saved: {timeElapsed}s.");
             }
-
-            // Continue timing from where we left off for this level
+            LoadStartTime(sceneName);
+            StartTimer();
+        }
+        else if (sceneName == "Level 3 concept")
+        {
+            if (!levelStartTimes.ContainsKey(sceneName))
+            {
+                // Level 3's start time is Level 2's end time
+                levelStartTimes[sceneName] = timeElapsed;
+            }
             LoadStartTime(sceneName);
             StartTimer();
         }
