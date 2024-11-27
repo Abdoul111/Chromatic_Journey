@@ -2,24 +2,29 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System.Collections.Generic;
 
 public class TimeCounter : MonoBehaviour
 {
+    public static TimeCounter Instance { get; private set; }
+
     public Text timerText;
     public TextMeshProUGUI finalTimerText;
+
     private float timeElapsed = 0f;
     private bool isTiming = false;
-    private static TimeCounter instance;
+
+    private Dictionary<string, float> levelStartTimes = new Dictionary<string, float>();
 
     private void Awake()
     {
-        // Singleton to ensure only one timer persists across scenes
-        if (instance != null && instance != this)
+        // Singleton pattern
+        if (Instance != null && Instance != this)
         {
             Destroy(gameObject); // Destroy duplicate instances
             return;
         }
-        instance = this;
+        Instance = this;
         DontDestroyOnLoad(gameObject); // Persist the timer across scenes
     }
 
@@ -66,78 +71,100 @@ public class TimeCounter : MonoBehaviour
 
     public void StopTimer()
     {
-        Debug.Log("StopTimer");
         isTiming = false;
     }
 
     public void StartTimer()
     {
-        Debug.Log("StartTimer");
         isTiming = true;
     }
 
-    public float GetTimeElapsed()
+    public void SaveStartTime(string levelName)
     {
-        Debug.Log(timeElapsed);
-        return timeElapsed;
+        levelStartTimes[levelName] = timeElapsed; // Save the current elapsed time for this level
+        Debug.Log($"Start time for {levelName} saved: {timeElapsed}s");
+    }
+
+    public void LoadStartTime(string levelName)
+    {
+        if (levelStartTimes.ContainsKey(levelName))
+        {
+            timeElapsed = levelStartTimes[levelName];
+            Debug.Log($"Start time for {levelName} restored: {timeElapsed}s");
+        }
+        else
+        {
+            Debug.Log($"No saved time for {levelName}, starting fresh.");
+        }
     }
 
     public void ResetTimer()
     {
-        Debug.Log("ResetTimer");
         timeElapsed = 0f;
         UpdateTimerText();
     }
 
+    private bool shouldResetTimerForLevel1 = false;
+
+    public void SetResetTimerFlag(bool value)
+    {
+        shouldResetTimerForLevel1 = value;
+    }
+
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // Ensure timerText is re-linked if the UI is reloaded
-        if (timerText == null)
-        {
-            GameObject timeTextObject = GameObject.Find("TimeText");
-            if (timeTextObject != null)
-            {
-                timerText = timeTextObject.GetComponent<Text>();
-            }
-        }
+        string sceneName = scene.name;
 
         // Handle the final timer text in the Finish scene
-        if (scene.name == "Finish")
+        if (sceneName == "Finish")
         {
             StopTimer();
+            levelStartTimes.Clear(); // Reset all saved times
+            Debug.Log("Level start times reset.");
 
-            // Find the finalTimerText in the new scene
             GameObject finalTimeTextObject = GameObject.Find("FinalTimeText");
             if (finalTimeTextObject != null)
             {
                 finalTimerText = finalTimeTextObject.GetComponent<TextMeshProUGUI>();
             }
 
-            // Update the final timer text
             UpdateFinalTimerText();
-            MainMenuLevelController.SetCurrentLevel(1);
+            return; // No further logic for the "Finish" scene
         }
 
-        // Reset timer if the player goes to the Main Menu
-        if (scene.name == "Main Menu")
+        // Link timerText in the new scene
+        GameObject timeTextObject = GameObject.Find("TimeText");
+        if (timeTextObject != null)
         {
-            StopTimer();
+            timerText = timeTextObject.GetComponent<Text>();
         }
 
-        // Start the timer when entering Level1
-        if (scene.name == "Level1")
+        // Handle level-specific logic
+        if (sceneName == "Level1")
         {
-            ResetTimer();
+            if (shouldResetTimerForLevel1)
+            {
+                ResetTimer(); // Start fresh only if the flag is true
+                shouldResetTimerForLevel1 = false; // Reset the flag
+            }
             StartTimer();
         }
-
-        if (scene.name == "Level2")
+        else if (sceneName == "Level2" || sceneName == "Level 3 concept")
         {
-            StartTimer();
-        }
+            if (levelStartTimes.ContainsKey(sceneName))
+            {
+                // If the timer for this level already exists, it means the player restarted the level.
+                Debug.Log($"Level {sceneName} restarted. Timer continues from {timeElapsed}s.");
+            }
+            else
+            {
+                // First time entering this level: set start time to the current timeElapsed
+                levelStartTimes[sceneName] = timeElapsed;
+                Debug.Log($"Start time for {sceneName} saved: {timeElapsed}s.");
+            }
 
-        if (scene.name == "Level 3 concept")
-        {
+            // Continue timing from where we left off for this level
+            LoadStartTime(sceneName);
             StartTimer();
         }
     }

@@ -7,6 +7,10 @@ public class LoadMainMenu : MonoBehaviour
     public void LoadMainMenuScene()
     {
         SceneManager.LoadScene("Main Menu");
+        if (SceneManager.GetActiveScene().name == "Finish") 
+        {
+            MainMenuLevelController.SetCurrentLevel(1);
+        }
     }
 
     public void LoadFinalScene()
