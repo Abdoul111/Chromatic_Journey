@@ -7577,7 +7577,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popUpString: Pick Wisely... Chroma. Which will it be,  1... 2... or 3?
-  audioPopup1: {fileID: 8300000, guid: 3f321b2e20ae5924e9decbc450531331, type: 3}
+  audioPopup1: {fileID: 8300000, guid: 509ca96e64a53104395988ed4295ba40, type: 3}
 --- !u!61 &699509776
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8441,7 +8441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popUpString: Breathe, Chroma... Don't forget to Breathe...
-  audioPopup1: {fileID: 8300000, guid: be4a3dff37ba66348ad69b898b99d391, type: 3}
+  audioPopup1: {fileID: 8300000, guid: c219123453023ea4db390934be8b82cc, type: 3}
 --- !u!61 &833142761
 BoxCollider2D:
   m_ObjectHideFlags: 0

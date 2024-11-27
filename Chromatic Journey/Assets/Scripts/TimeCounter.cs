@@ -15,6 +15,8 @@ public class TimeCounter : MonoBehaviour
     private bool isTiming = false;
 
     private Dictionary<string, float> levelStartTimes = new Dictionary<string, float>();
+    private string lastSceneName = "";
+    private float lastKnownElapsedTime = 0f;
 
     private void Awake()
     {
@@ -115,11 +117,16 @@ public class TimeCounter : MonoBehaviour
     {
         string sceneName = scene.name;
 
+        // Check if the scene is being reloaded
+        bool isReloading = lastSceneName == sceneName;
+        lastSceneName = sceneName;
+
         // Handle the final timer text in the Finish scene
         if (sceneName == "Finish")
         {
             StopTimer();
             levelStartTimes.Clear(); // Reset all saved times
+            lastKnownElapsedTime = 0f; // Clear the last known elapsed time
             Debug.Log("Level start times reset.");
 
             GameObject finalTimeTextObject = GameObject.Find("FinalTimeText");
@@ -131,6 +138,7 @@ public class TimeCounter : MonoBehaviour
             UpdateFinalTimerText();
             return; // No further logic for the "Finish" scene
         }
+
         // Link timerText in the new scene
         GameObject timeTextObject = GameObject.Find("TimeText");
         if (timeTextObject != null)
@@ -139,34 +147,36 @@ public class TimeCounter : MonoBehaviour
         }
 
         // Handle level-specific logic
-        if (sceneName == "Level1")
+        if (sceneName == "Level1" || sceneName == "Level2" || sceneName == "Level 3 concept")
         {
-            if (shouldResetTimerForLevel1)
+            if (!isReloading)
             {
-                ResetTimer(); // Start fresh only if the flag is true
-                shouldResetTimerForLevel1 = false; // Reset the flag
+                if (sceneName == "Level1" && shouldResetTimerForLevel1)
+                {
+                    ResetTimer(); // Start fresh only if the flag is true
+                    shouldResetTimerForLevel1 = false; // Reset the flag
+                }
+                else if (levelStartTimes.ContainsKey(sceneName))
+                {
+                    // Load the last known elapsed time for the level
+                    timeElapsed = levelStartTimes[sceneName];
+                }
+                else
+                {
+                    // If no prior time exists, use the last known elapsed time
+                    timeElapsed = lastKnownElapsedTime;
+                }
             }
-            StartTimer();
-        }
-        else if (sceneName == "Level2")
-        {
-            if (!levelStartTimes.ContainsKey(sceneName))
-            {
-                // Level 2's start time is Level 1's end time
-                levelStartTimes[sceneName] = timeElapsed;
-            }
-            LoadStartTime(sceneName);
-            StartTimer();
-        }
-        else if (sceneName == "Level 3 concept")
-        {
-            if (!levelStartTimes.ContainsKey(sceneName))
-            {
-                // Level 3's start time is Level 2's end time
-                levelStartTimes[sceneName] = timeElapsed;
-            }
-            LoadStartTime(sceneName);
+
             StartTimer();
         }
     }
+
+    // Called when transitioning to the main menu
+    public void SaveCurrentTime()
+    {
+        lastKnownElapsedTime = timeElapsed; // Save the current elapsed time
+        Debug.Log($"Saved current elapsed time: {lastKnownElapsedTime}s");
+    }
+
 }
