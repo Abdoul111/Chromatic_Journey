@@ -26,6 +26,8 @@ public class ButtonTrigger : MonoBehaviour
 
     private void Start()
     {
+        currentButtonInSequence = 1;
+
         originalPosition = transform.position;
         SetupButtonText();
 
