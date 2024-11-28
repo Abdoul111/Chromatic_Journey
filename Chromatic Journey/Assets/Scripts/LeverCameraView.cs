@@ -17,6 +17,8 @@ public class LeverCameraView : MonoBehaviour
     private bool isDisplaying;
     private MovingLever currentLever;
 
+    public GameObject borderPanel;
+
     private void Start()
     {
         mainCamera = Camera.main;
@@ -163,6 +165,7 @@ public class LeverCameraView : MonoBehaviour
     {
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
+        borderPanel.SetActive(true);
     }
 
     private void HideDisplay()
@@ -170,6 +173,9 @@ public class LeverCameraView : MonoBehaviour
         canvasGroup.alpha = 0f;
         canvasGroup.blocksRaycasts = false;
         miniCamera.enabled = false;
+
+        borderPanel.SetActive(false);
+
     }
 
     private void OnDestroy()
