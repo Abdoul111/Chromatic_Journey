@@ -42,7 +42,7 @@ public class IntroPlayerMovement : MonoBehaviour
     private void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
-        bool jumping = Input.GetKeyDown(KeyCode.Space);
+        bool jumping = Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow);
 
         // Decrease the jump timer
         if (jumpTimer > 0)
