@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class PopupText : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class PopupText : MonoBehaviour
     public Image popUpBoxImage;
     public Button popupButton;
 
-    private SignManager currentSignManager;
+    public SignManager currentSignManager;
     private bool isPopupActive = false;
     private Coroutine fadeCoroutine;
 
@@ -26,6 +27,7 @@ public class PopupText : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+            SceneManager.sceneLoaded += OnSceneLoaded; // Listen for scene reloads
         }
         else
         {
@@ -37,6 +39,29 @@ public class PopupText : MonoBehaviour
         {
             popupButton.onClick.AddListener(ClosePopUp);
         }
+    }
+
+    private void OnDestroy()
+    {
+        if (Instance == this)
+        {
+            SceneManager.sceneLoaded -= OnSceneLoaded; // Unregister when destroyed
+        }
+    }
+    
+    public void ClearCurrentSignManager(SignManager signManager)
+    {
+        if (currentSignManager == signManager)
+        {
+            currentSignManager = null;
+        }
+    }
+
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        ResetPopupUI(); // Reset popup UI to its default state
+        currentSignManager = null; // Clear any lingering sign references
     }
 
     public void PopUp(string text)
