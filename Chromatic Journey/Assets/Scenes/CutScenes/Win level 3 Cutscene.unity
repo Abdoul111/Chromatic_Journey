@@ -281,7 +281,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 496709746}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 526d520697035f44ab2337f0d468b78f, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: b9d21eda088187e4f8f0ac632796d432, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -757,7 +757,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.04705883, g: 0.3019608, b: 0.57254905, a: 1}
+  m_Color: {r: 0.14901961, g: 0.38431373, b: 0.85882354, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
