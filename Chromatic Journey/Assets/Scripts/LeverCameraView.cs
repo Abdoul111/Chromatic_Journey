@@ -4,8 +4,8 @@ using UnityEngine.UI;
 public class LeverCameraView : MonoBehaviour
 {
     [Header("Camera Settings")]
-    public Vector2 viewportSize = new Vector2(200f, 150f); // Size in pixels
-    public Vector2 viewportOffset = new Vector2(-220f, 20f); // Offset from bottom-right corner
+    public Vector2 viewportSize = new Vector2(640f, 360f); // Size in pixels
+    public Vector2 viewportOffset = new Vector2(-15f, 15f); // Offset from bottom-right corner
     public float displayDuration = 3f;
 
     private Camera mainCamera;
@@ -78,7 +78,7 @@ public class LeverCameraView : MonoBehaviour
         }
         uiContainer.transform.SetParent(canvas.transform);
 
-        // Setup RectTransform
+        // Setup RectTransform for the UI container
         RectTransform rectTransform = uiContainer.AddComponent<RectTransform>();
         rectTransform.sizeDelta = viewportSize;
         rectTransform.anchorMin = new Vector2(1, 0); // Bottom right anchor
@@ -89,26 +89,41 @@ public class LeverCameraView : MonoBehaviour
         // Add Canvas Group for fading
         canvasGroup = uiContainer.AddComponent<CanvasGroup>();
 
-        // Setup RawImage
+        // Setup RawImage as a child of the UI container
         GameObject imageObj = new GameObject("CameraView");
         imageObj.transform.SetParent(uiContainer.transform);
+
+        // Setup RawImage for displaying the camera view
         displayImage = imageObj.AddComponent<RawImage>();
         displayImage.texture = renderTexture;
 
-        // Setup image RectTransform
+        // Setup RectTransform for the RawImage
         RectTransform imageTransform = imageObj.GetComponent<RectTransform>();
-        imageTransform.anchorMin = Vector2.zero;
+        imageTransform.anchorMin = Vector2.zero; // Stretch to fit parent
         imageTransform.anchorMax = Vector2.one;
-        imageTransform.sizeDelta = Vector2.zero;
+        imageTransform.sizeDelta = Vector2.zero; // Match parent size
         imageTransform.anchoredPosition = Vector2.zero;
+
+        // Optionally add an AspectRatioFitter to maintain aspect ratio
+        AspectRatioFitter aspectFitter = imageObj.AddComponent<AspectRatioFitter>();
+        aspectFitter.aspectMode = AspectRatioFitter.AspectMode.FitInParent;
+        aspectFitter.aspectRatio = viewportSize.x / viewportSize.y;
     }
+
 
     public void ShowLeverMovement(MovingLever lever)
     {
+        // If already displaying, immediately override the current lever and timer
+        if (isDisplaying)
+        {
+            // Clear any lingering display state
+            HideDisplay();
+        }
+
         currentLever = lever;
 
         // Calculate the center point between start and end positions
-        Vector2 centerPoint = (lever.startPoint.position + lever.endPoint.position) / 2f;
+        Vector2 centerPoint = lever.startPoint.position;
 
         // Position mini camera with same Z distance as main camera
         miniCamera.transform.position = new Vector3(
@@ -123,8 +138,11 @@ public class LeverCameraView : MonoBehaviour
             miniCamera.orthographicSize = mainCamera.orthographicSize;
         }
 
+        // Reset display timer and state
         displayTimer = displayDuration;
         isDisplaying = true;
+
+        // Show the display and enable the mini camera
         ShowDisplay();
         miniCamera.enabled = true;
     }
@@ -133,17 +151,6 @@ public class LeverCameraView : MonoBehaviour
     {
         if (isDisplaying)
         {
-            if (currentLever != null)
-            {
-                // Update camera to follow lever while maintaining main camera's view properties
-                Vector3 leverPos = currentLever.transform.position;
-                miniCamera.transform.position = new Vector3(
-                    leverPos.x,
-                    leverPos.y,
-                    mainCamera.transform.position.z
-                );
-            }
-
             displayTimer -= Time.deltaTime;
 
             // Fade out near the end
@@ -152,6 +159,7 @@ public class LeverCameraView : MonoBehaviour
                 canvasGroup.alpha = displayTimer / 0.5f;
             }
 
+            // Hide display when the timer ends
             if (displayTimer <= 0)
             {
                 HideDisplay();
@@ -170,13 +178,16 @@ public class LeverCameraView : MonoBehaviour
 
     private void HideDisplay()
     {
+        // Disable mini camera and hide UI elements
         canvasGroup.alpha = 0f;
         canvasGroup.blocksRaycasts = false;
         miniCamera.enabled = false;
-
         borderPanel.SetActive(false);
 
+        // Clear any remaining state
+        currentLever = null;
     }
+
 
     private void OnDestroy()
     {
