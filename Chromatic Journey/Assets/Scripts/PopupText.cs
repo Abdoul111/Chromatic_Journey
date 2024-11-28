@@ -11,134 +11,170 @@ public class PopupText : MonoBehaviour
     public GameObject popUpBox;
     public Animator animator;
     public TMP_Text popUpText;
-    public Image popUpBoxImage; // Reference to the popup box's image component
-    private bool isPopupActive = false;
+    public Image popUpBoxImage;
     public Button popupButton;
-    private SignManager currentSignManager;
-    private Color originalTextColor;
-    private Color originalBoxColor;
-    private Color originalButtonColor;
-    private Color originalButtonTextColor;
 
+    private SignManager currentSignManager;
+    private bool isPopupActive = false;
+    private Coroutine fadeCoroutine;
+
+    private readonly Color semiTransparentGray = new Color(0.2f, 0.2f, 0.2f, 0.8f); // Semi-transparent gray
+    private readonly Color fullyOpaque = new Color(1f, 1f, 1f, 1f); // Fully opaque color
 
     private void Awake()
     {
-        // Ensure only one instance of PopupManager exists.
         if (Instance == null)
         {
             Instance = this;
         }
         else
         {
-            Destroy(gameObject); // Destroy duplicate
+            Destroy(gameObject);
         }
 
-        // Store original colors
-        originalTextColor = popUpText.color;
-        originalBoxColor = popUpBoxImage.color;
-        originalButtonColor = popupButton.image.color;
-        originalButtonTextColor = popupButton.GetComponentInChildren<TMP_Text>().color;
+        // Set up button click functionality
+        if (popupButton != null)
+        {
+            popupButton.onClick.AddListener(ClosePopUp);
+        }
     }
 
     public void PopUp(string text)
     {
+        // Stop any existing fade coroutine to prevent conflicts
+        if (fadeCoroutine != null)
+        {
+            StopCoroutine(fadeCoroutine);
+        }
+
+        // Set initial colors for transparency
+        SetInitialTransparency();
+
+        // Display the popup box and set its text
         popUpBox.SetActive(true);
         popUpText.text = text;
+
+        // Trigger the animation
         animator.SetTrigger("pop");
         isPopupActive = true;
 
-        // Re-enable the button for interaction
+        // Enable the button for interaction
         popupButton.interactable = true;
     }
 
     public void RegisterSignManager(SignManager signManager)
     {
-        // Stop audio from the previously registered sign
-        if (currentSignManager != null && currentSignManager != signManager)
+        currentSignManager = signManager;
+    }
+
+    public void StopAndResetCurrentPopup()
+    {
+        if (currentSignManager != null)
         {
+            // Stop the audio of the currently active sign
             currentSignManager.StopAudio();
+
+            // Reset the current sign's state
+            currentSignManager.ResetPopupState();
         }
 
-        // Update the currentSignManager
-        currentSignManager = signManager;
+        // Stop popup animations and fade coroutines
+        if (fadeCoroutine != null)
+        {
+            StopCoroutine(fadeCoroutine);
+        }
+
+        // Immediately hide the popup box
+        ResetPopupUI();
+    }
+
+    private void ResetPopupUI()
+    {
+        isPopupActive = false;
+
+        // Stop the animator and reset the popup box
+        animator.ResetTrigger("pop");
+        animator.ResetTrigger("close");
+        popUpBox.SetActive(false);
+
+        // Clear the current sign reference
+        currentSignManager = null;
+
+        // Clear button hover and focus state
+        ClearButtonState();
+    }
+
+    private void SetInitialTransparency()
+    {
+        // Set popup box background to semi-transparent gray
+        popUpBoxImage.color = semiTransparentGray;
+
+        // Set popup text and button to fully opaque
+        popUpText.color = fullyOpaque;
+        popupButton.image.color = fullyOpaque;
+
+        // Ensure button text is fully visible
+        popupButton.GetComponentInChildren<TMP_Text>().color = fullyOpaque;
     }
 
     public void ClosePopUp()
     {
         if (isPopupActive)
         {
-            Debug.Log("Button clicked!");
-            animator.SetTrigger("close");
-            popUpBox.SetActive(false);
-
-            // Notify the current sign manager to reset its state
+            // Stop audio immediately
             if (currentSignManager != null)
             {
-                currentSignManager.ResetPopup(); // Reset the state
-                currentSignManager.StopAudio(); // Stop audio if playing
+                currentSignManager.StopAudio();
             }
 
-            // Disable the button to prevent unintended clicks
-            popupButton.interactable = false;
-
-            // Clear button hover or focus state
-            EventSystem.current.SetSelectedGameObject(null);
-
-            isPopupActive = false;
+            // Trigger the fade-out coroutine
+            StartFadeOut(0f, 1f);
         }
     }
 
-    public void ResetState()
+    public void StartFadeOut(float delay, float fadeDuration)
     {
-        isPopupActive = false;
-        currentSignManager = null; // Clear the reference to the current sign manager
+        // Stop any existing fade coroutine
+        if (fadeCoroutine != null)
+        {
+            StopCoroutine(fadeCoroutine);
+        }
 
-        // Reactivate the popup box for future triggers
-        popUpBox.SetActive(true);
+        // Start a new fade-out coroutine
+        fadeCoroutine = StartCoroutine(FadeOutAfterDelay(delay, fadeDuration));
+    }
 
-        // Restore original colors
-        popUpText.color = originalTextColor;
-        popUpBoxImage.color = originalBoxColor;
-        popupButton.image.color = originalButtonColor;
-        popupButton.GetComponentInChildren<TMP_Text>().color = originalButtonTextColor;
+    private void ClearButtonState()
+    {
+        // Deselect the button in the EventSystem
+        EventSystem.current.SetSelectedGameObject(null);
+
+        // Re-enable the button after resetting its state
+        popupButton.interactable = true;
     }
 
     public IEnumerator FadeOutAfterDelay(float delay, float fadeDuration)
     {
         yield return new WaitForSeconds(delay);
 
-        // Reset colors to original values before starting fade
-        popUpText.color = originalTextColor;
-        popUpBoxImage.color = originalBoxColor;
-        popupButton.image.color = originalButtonColor;
-        popupButton.GetComponentInChildren<TMP_Text>().color = originalButtonTextColor;
-
         float elapsedTime = 0f;
 
+        // Gradually fade out the popup components
         while (elapsedTime < fadeDuration)
         {
             elapsedTime += Time.deltaTime;
             float alpha = Mathf.Clamp01(1f - (elapsedTime / fadeDuration));
 
-            // Gradually fade text, popup box, and button components
-            popUpText.color = new Color(originalTextColor.r, originalTextColor.g, originalTextColor.b, alpha);
-            popUpBoxImage.color = new Color(originalBoxColor.r, originalBoxColor.g, originalBoxColor.b, alpha);
-            popupButton.image.color = new Color(originalButtonColor.r, originalButtonColor.g, originalButtonColor.b, alpha);
-            popupButton.GetComponentInChildren<TMP_Text>().color = new Color(originalButtonTextColor.r, originalButtonTextColor.g, originalButtonTextColor.b, alpha);
+            // Fade out text, popup box, and button components
+            popUpText.color = new Color(popUpText.color.r, popUpText.color.g, popUpText.color.b, alpha);
+            popUpBoxImage.color = new Color(semiTransparentGray.r, semiTransparentGray.g, semiTransparentGray.b, alpha);
+            popupButton.image.color = new Color(fullyOpaque.r, fullyOpaque.g, fullyOpaque.b, alpha);
+            popupButton.GetComponentInChildren<TMP_Text>().color = new Color(fullyOpaque.r, fullyOpaque.g, fullyOpaque.b, alpha);
 
             yield return null;
         }
 
-        // Ensure everything is fully transparent after fade
-        popUpText.color = new Color(originalTextColor.r, originalTextColor.g, originalTextColor.b, 0f);
-        popUpBoxImage.color = new Color(originalBoxColor.r, originalBoxColor.g, originalBoxColor.b, 0f);
-        popupButton.image.color = new Color(originalButtonColor.r, originalButtonColor.g, originalButtonColor.b, 0f);
-        popupButton.GetComponentInChildren<TMP_Text>().color = new Color(originalButtonTextColor.r, originalButtonTextColor.g, originalButtonTextColor.b, 0f);
-
-        // Hide the popup box
-        popUpBox.SetActive(false);
-
-        // Reset the state of PopupText after fade
-        ResetState();
+        // Reset the popup UI after fading out
+        ResetPopupUI();
     }
 }

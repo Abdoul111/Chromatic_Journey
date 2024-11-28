@@ -181,7 +181,7 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded) // Only align to ground when grounded
         {
             RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 2.0f, groundLayer);
-            if (hit.collider != null && hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground"))
+            if (hit.collider != null && hit.collider.gameObject.layer == LayerMask.NameToLayer("Ground") && (!hit.collider.CompareTag("pushable")))
             {
 
                 Vector2 groundNormal = hit.normal;

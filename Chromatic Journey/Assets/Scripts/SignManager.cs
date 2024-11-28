@@ -6,7 +6,6 @@ public class SignManager : MonoBehaviour
     [SerializeField] public string popUpString;
     [SerializeField] private AudioClip audioPopup1;
     private AudioSource audioSource;
-    private bool isPopupActive = false;
 
     private void Start()
     {
@@ -19,56 +18,48 @@ public class SignManager : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && !isPopupActive)
+        if (other.CompareTag("Player"))
         {
-            // Stop any ongoing coroutine in case of re-triggering
-            StopAllCoroutines();
+            // Stop and reset any active popup and audio
+            PopupText.Instance.StopAndResetCurrentPopup();
 
-            isPopupActive = true;
-
-            // Register this sign with PopupText
+            // Set this sign as the new active sign
             PopupText.Instance.RegisterSignManager(this);
 
-            // Reset popup box to ensure it's visible
-            PopupText.Instance.popUpBox.SetActive(true);
-
-            if (audioPopup1 != null && !audioSource.isPlaying)
-            {
-                audioSource.PlayOneShot(audioPopup1);
-            }
-
-            Debug.Log("Trigger detected with: " + other.gameObject.name);
-            PopupText.Instance.PopUp(popUpString);
-
-            // Start the popup handling coroutine
-            StartCoroutine(HandlePopupAfterAudio());
+            // Play the audio and show the popup for this sign
+            DisplayPopupAndAudio();
         }
     }
 
-    private IEnumerator HandlePopupAfterAudio()
+    private void DisplayPopupAndAudio()
     {
-        // Wait for the audio to finish
-        yield return new WaitForSeconds(audioPopup1.length);
+        // Play audio
+        if (audioPopup1 != null)
+        {
+            audioSource.Stop(); // Stop any ongoing audio
+            audioSource.PlayOneShot(audioPopup1);
+        }
 
-        // Start fading out the popup text
-        yield return PopupText.Instance.FadeOutAfterDelay(0f, 3f);
+        // Show popup text
+        PopupText.Instance.PopUp(popUpString);
 
-        // Allow the sign to be triggered again
-        ResetPopup();
-    }
-
-    public void ResetPopup()
-    {
-        isPopupActive = false;
-        StopAllCoroutines(); // Stop any ongoing coroutines
+        // Trigger fade-out after the audio ends
+        if (audioPopup1 != null)
+        {
+            PopupText.Instance.StartFadeOut(audioPopup1.length, 1f); // Fade after audio
+        }
     }
 
     public void StopAudio()
     {
         if (audioSource.isPlaying)
         {
-            Debug.Log("Stopping audio for sign: " + gameObject.name);
             audioSource.Stop();
         }
+    }
+
+    public void ResetPopupState()
+    {
+        StopAllCoroutines(); // Stop any running coroutines for this sign
     }
 }

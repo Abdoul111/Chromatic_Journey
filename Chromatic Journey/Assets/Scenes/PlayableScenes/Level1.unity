@@ -2803,7 +2803,7 @@ MonoBehaviour:
   goalWordLabel: {fileID: 818300465}
   currentWordLabel: {fileID: 587086907}
   targetSequence: LAVA
-  displaySequence: What am I? _ _ _ _
+  displaySequence: What am I?      _ _ _ _
 --- !u!61 &273960896
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4122,7 +4122,7 @@ Transform:
   m_GameObject: {fileID: 382071824}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -945.834, y: -544.31396, z: -0.32079202}
+  m_LocalPosition: {x: -946.04004, y: -544.31494, z: -0.32079202}
   m_LocalScale: {x: 1.0884, y: 3.1305106, z: 1.0884}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4141,9 +4141,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d433f1dce6f28054699e4e6ad7b70003, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.599
+  m_Volume: 0.333
   m_Pitch: 0.92
   Loop: 0
   Mute: 0
@@ -4241,7 +4241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popUpString: Be sure to collect   ALL the paint drops, they're necessary to restore
     the world.
-  audioPopup1: {fileID: 8300000, guid: 26192a9b00cfe514ba6fbd77a6edc4ce, type: 3}
+  audioPopup1: {fileID: 8300000, guid: b7d3edf2ee2832b4cbc25a97cb2ed18c, type: 3}
 --- !u!61 &382071828
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8854,7 +8854,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 82172c54ffdb9714c9bdfc4da4d26e70, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.02
+  m_Volume: 0.018
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -9801,7 +9801,7 @@ Transform:
   m_GameObject: {fileID: 1042643232}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -963.16, y: -541.24, z: 0}
+  m_LocalPosition: {x: -963.77, y: -541.19, z: 0}
   m_LocalScale: {x: 0.49553454, y: 0.49553454, z: 0.49553454}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14751,7 +14751,7 @@ Transform:
   m_GameObject: {fileID: 1063543011}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -963.12, y: -540.842, z: -0.32079202}
+  m_LocalPosition: {x: -963.73004, y: -540.792, z: -0.32079202}
   m_LocalScale: {x: 1.0884, y: 3.1305106, z: 1.0884}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15694,7 +15694,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.6
+  m_Volume: 0.708
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -16664,7 +16664,7 @@ Transform:
   m_GameObject: {fileID: 1257442693}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -945.824, y: -544.57, z: 0}
+  m_LocalPosition: {x: -946.03, y: -544.571, z: 0}
   m_LocalScale: {x: 0.49553454, y: 0.49553454, z: 0.49553454}
   m_ConstrainProportionsScale: 0
   m_Children: []
