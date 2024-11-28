@@ -46495,7 +46495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   viewportSize: {x: 640, y: 360}
-  viewportOffset: {x: 0, y: 0}
+  viewportOffset: {x: -15, y: 15}
   displayDuration: 5
   borderPanel: {fileID: 1203100238}
 --- !u!4 &1585288667

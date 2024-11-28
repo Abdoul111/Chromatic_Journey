@@ -31,6 +31,16 @@ public class SignManager : MonoBehaviour
         }
     }
 
+    private void OnDisable()
+    {
+        // Clear popup reference to this sign if it exists
+        if (PopupText.Instance != null)
+        {
+            PopupText.Instance.ClearCurrentSignManager(this);
+        }
+    }
+
+
     private void DisplayPopupAndAudio()
     {
         // Play audio
