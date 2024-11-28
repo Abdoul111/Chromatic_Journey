@@ -6309,7 +6309,8 @@ MonoBehaviour:
   startPoint: {fileID: 428615834}
   endPoint: {fileID: 428615833}
   speed: 9
-  triggerButton: {fileID: 0}
+  triggerButton: {fileID: 544455055}
+  cameraView: {fileID: 1369666955}
 --- !u!1 &439747682
 GameObject:
   m_ObjectHideFlags: 0
@@ -16312,7 +16313,8 @@ MonoBehaviour:
   startPoint: {fileID: 749032671}
   endPoint: {fileID: 749032670}
   speed: 9
-  triggerButton: {fileID: 0}
+  triggerButton: {fileID: 1956392392}
+  cameraView: {fileID: 1369666955}
 --- !u!1 &756633392
 GameObject:
   m_ObjectHideFlags: 0
@@ -18299,9 +18301,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 152002331}
+  - {fileID: 1173115888}
   - {fileID: 544455056}
   - {fileID: 1525388645}
-  - {fileID: 1173115888}
   - {fileID: 1956392393}
   - {fileID: 1698272073}
   m_Father: {fileID: 0}
@@ -18618,7 +18620,8 @@ MonoBehaviour:
   startPoint: {fileID: 854592910}
   endPoint: {fileID: 854592909}
   speed: 9
-  triggerButton: {fileID: 0}
+  triggerButton: {fileID: 1525388644}
+  cameraView: {fileID: 1369666955}
 --- !u!1 &862794933
 GameObject:
   m_ObjectHideFlags: 0
@@ -35908,6 +35911,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1369478101}
   m_CullTransparentMesh: 1
+--- !u!1 &1369666954
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1369666956}
+  - component: {fileID: 1369666955}
+  m_Layer: 0
+  m_Name: LeverCameraView
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1369666955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369666954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 890a3724ac968d14a86d39fcf2f10451, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewportSize: {x: 640, y: 360}
+  viewportOffset: {x: 0, y: 0}
+  displayDuration: 5
+--- !u!4 &1369666956
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369666954}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.855806, y: 14.794826, z: -0.612057}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1372077974
 GameObject:
   m_ObjectHideFlags: 0
@@ -42267,7 +42317,8 @@ MonoBehaviour:
   startPoint: {fileID: 471198170}
   endPoint: {fileID: 1250476676}
   speed: 9
-  triggerButton: {fileID: 0}
+  triggerButton: {fileID: 1173115887}
+  cameraView: {fileID: 1369666955}
 --- !u!1 &1495366569
 GameObject:
   m_ObjectHideFlags: 0
@@ -49256,7 +49307,8 @@ MonoBehaviour:
   startPoint: {fileID: 1820001789}
   endPoint: {fileID: 1820001788}
   speed: 9
-  triggerButton: {fileID: 0}
+  triggerButton: {fileID: 1698272072}
+  cameraView: {fileID: 1369666955}
 --- !u!4 &1821664407 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 107540711077034587, guid: d3015b7eea383f64d8b81f965cc466e7, type: 3}
@@ -52240,7 +52292,8 @@ MonoBehaviour:
   startPoint: {fileID: 1950633766}
   endPoint: {fileID: 1950633765}
   speed: 9
-  triggerButton: {fileID: 0}
+  triggerButton: {fileID: 152002330}
+  cameraView: {fileID: 1369666955}
 --- !u!1 &1954642853
 GameObject:
   m_ObjectHideFlags: 0
@@ -54531,3 +54584,4 @@ SceneRoots:
   - {fileID: 730493214}
   - {fileID: 824962402}
   - {fileID: 1495366570}
+  - {fileID: 1369666956}

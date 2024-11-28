@@ -74,7 +74,7 @@ public class PlayerMovement : MonoBehaviour
             return; // Stop all input handling if the player is not alive
         }
         horizontal = Input.GetAxisRaw("Horizontal");
-        bool jumping = Input.GetKeyDown(KeyCode.Space);
+        bool jumping = Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow);
 
         // Footstep logic: Play sound only if grounded and moving with input
         if (isGrounded && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)))
